@@ -9,7 +9,6 @@
     padding: 0;
     margin: 0;
     outline: 0;
-    color: white;
     text-align: center;
 }
 
@@ -18,9 +17,9 @@ body{
     flex-direction: column;
 
     background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(255, 255, 255));
-    background-attachment: fixed;
     backdrop-filter: brightness(var(--brilho));
     animation: bgAn 3s linear infinite;
+    background-attachment: fixed;
     padding: 50px;
     height: auto;
     gap: 20px;
@@ -34,28 +33,65 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 
-    background: red;
-    width: 30vw;
+    background: conic-gradient(from var(--angle), rgb(255, 255, 255), rgb(0, 0, 0), rgb(255, 255, 255));
+    border: solid 3px white;
+    animation: rotateNeon 2s linear infinite;
     margin: 0 auto;
+    width: 30vw;
 }
-.btn{
-    background: black;
+.boxIpt:focus-within{
+    padding: 3px;
+    border: none;
+}
+.divIpt{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    width: 100%;
+}
+.divIpt i{
+    position: absolute;
+
+    color: black;
+    pointer-events: none;
+}
+.divIpt i:nth-child(1){
+    left: 15px;
+}
+.divIpt i:nth-child(3){
+    right: 15px;
 }
 .ipt{
     color: black;
+    border-color: black;
+    background: rgb(39, 39, 39);
+    color: rgb(133, 133, 133);
+}
+.btn{
+    cursor: pointer;
+    background: black;
+    border: none;
+    color: white;
+}
+.btn:hover{
+    color: rgb(133, 133, 133);
+    transition: .3s;
+}
+.ipt, .btn{
     padding: 10px;
     width: 100%;
-}
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
 }
 .boxSelecao{
     display: flex;
     flex-direction: column;
     
     width: 100%;
+}
+.boxSelecao *{
+    color: white;
 }
 .boxSelecao div{
     width: 100%;
@@ -121,6 +157,11 @@ table tr:nth-child(odd) {
 
 @property --brilho {
     initial-value: 1;
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 @keyframes bgAn {
     0% {
@@ -196,5 +237,10 @@ table tr:nth-child(odd) {
     }
     100% {
         color: rgb(0, 255, 255);
+    }
+}
+@keyframes rotateNeon {
+    to {
+        --angle: 360deg;
     }
 }
