@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    color: white;
+    text-align: center;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(255, 255, 255));
+    background-attachment: fixed;
+    backdrop-filter: brightness(var(--brilho));
+    animation: bgAn 3s linear infinite;
+    padding: 50px;
+    height: auto;
+    gap: 20px;
+}
+.titulo{
+    animation: txtAn 5s linear infinite;
+    font-size: 60px;
+}
+.boxIpt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background: red;
+    width: 30vw;
+    margin: 0 auto;
+}
+.btn{
+    background: black;
+}
+.ipt{
+    color: black;
+    padding: 10px;
+    width: 100%;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.boxSelecao{
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+}
+.boxSelecao div{
+    width: 100%;
+}
+.info1{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+}
+.nome{
+    font-size: 50px;
+}
+.grupo{
+    
+}
+.tecnico{
+    font-size: 20px;
+}
+.logo{
+    object-fit: contain;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+}
+.info2{
+    display: flex;
+    justify-content: space-around;
+    
+    margin: 80px 0;
+}
+.boxInfos{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    
+    gap: 20px;
+}
+table{
+    border-collapse: collapse;
+    box-shadow: 0 0 25px black;
+}
+table tr,
+table th,
+table td{
+    border: solid 2px rgb(44, 44, 44);
+    height: 40px;
+    padding: 0 10px;
+}
+table th{
+    background: rgb(54, 54, 54);
+}
+table tr{
+    background: rgb(107, 107, 107);
+}
+table tr:nth-child(odd) {
+    background-color: #4e4e4e;
+}
+.boxInfos p{
+    font-size: 26px;
+}
+
+@property --brilho {
+    initial-value: 1;
+}
+@keyframes bgAn {
+    0% {
+        --brilho:0.96
+    }
+    5% {
+        --brilho:0.92
+    }
+    10% {
+        --brilho:0.88
+    }
+    25% {
+        --brilho:0.84
+    }
+    20% {
+        --brilho:0.80
+    }
+    25% {
+        --brilho:0.76
+    }
+    30% {
+        --brilho:0.72
+    }
+    35% {
+        --brilho:0.68
+    }
+    40% {
+        --brilho:0.64
+    }
+    45% {
+        --brilho:0.60
+    }
+    50% {
+        --brilho:0.56
+    }
+    55% {
+        --brilho:0.60
+    }
+    60% {
+        --brilho:0.64
+    }
+    65% {
+        --brilho:0.68
+    }
+    70% {
+        --brilho:0.72
+    }
+    75% {
+        --brilho:0.76
+    }
+    80% {
+        --brilho:0.80
+    }
+    85% {
+        --brilho:0.84
+    }
+    90% {
+        --brilho:0.88
+    }
+    95% {
+        --brilho:0.92
+    }
+    100% {
+        --brilho:0.96
+    }
+}
+@keyframes txtAn {
+    0% {
+        color: rgb(0, 255, 255);
+    }
+    50% {
+        color: white;
+    }
+    100% {
+        color: rgb(0, 255, 255);
+    }
+}
