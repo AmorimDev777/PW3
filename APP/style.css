@@ -14,16 +14,49 @@
 
 body{
     display: flex;
+    align-items: center;
     flex-direction: column;
 
     background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(255, 255, 255));
     backdrop-filter: brightness(var(--brilho));
     animation: bgAn 3s linear infinite;
-    background-attachment: fixed;
-    padding: 50px;
     height: auto;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    padding: 50px;
     gap: 20px;
 }
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+
+    border-radius: 20px;
+    top: 5vh;
+    height: 10vh;
+    aspect-ratio: 3/1;
+    transform: translateY(-15vh);
+    font-size: 14px;
+    z-index: 999;
+    transition: .3s;
+}
+.valido, .invalido{
+    transform: translateY(0);
+}
+.valido{
+    border: solid 3px green;
+    background: rgb(157, 255, 157);
+    color: green; 
+}
+.invalido{
+    border: solid 3px red;
+    background: rgb(255, 178, 178);
+    color: red;
+}
+
 .titulo{
     animation: txtAn 5s linear infinite;
     font-size: 60px;
@@ -83,6 +116,10 @@ body{
 .ipt, .btn{
     padding: 10px;
     width: 100%;
+}
+img:hover{  
+    transform: scale(1.1);
+    transition: .2s;
 }
 .boxSelecao{
     display: flex;

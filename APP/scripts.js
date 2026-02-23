@@ -12,6 +12,26 @@ const tableConquistas = document.querySelector('.tbConquistas');
 const tableJogadores = document.querySelector('.tbJogadores');
 const txtNumTitulos = document.querySelector('.numTitulos');
 const txtNumJogadores = document.querySelector('.numJogadores');
+const card = document.querySelector('.card')
+
+const alertar = (status) => {
+    if(status === 'invalido') {
+        inv()
+    }
+    else {
+        vl()
+    }
+    ipt.value = ''
+}
+
+function inv() {
+    card.textContent = "Inválido, digite certo seu burro!!!"
+    addClassOnCard('invalido')
+}
+function vl() {
+    card.textContent = "Requisitado com sucesso!!!"
+    addClassOnCard('valido')
+}
 
 let base_url = "http://localhost:3000"
 let requestOptions = {
@@ -80,9 +100,17 @@ function requisitar() {
             tableJogadores.appendChild(row)
         })
         
-        console.log(ipt.value + ' buscado(a) com sucesso!!!')
+        alertar('valido')
         ipt.value = ""
         ipt.focus()
     })
-    .catch(error => console.log('error', error, 'Não foi possível buscar * ' + ipt.value + ' * digite corretamente'))
+    .catch(error => alertar('invalido'))
+}
+
+function addClassOnCard(status) {
+    card.classList.add(status)
+    setTimeout(() => {
+        card.classList.remove(status)
+        card.textContent = ''
+    },2000)
 }
