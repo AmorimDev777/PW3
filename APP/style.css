@@ -25,6 +25,8 @@ body{
     overflow-x: hidden;
     padding: 50px;
     gap: 20px;
+    --cor-p: rgb(0, 255, 255);
+    --cor-s: white;
 }
 
 .card{
@@ -267,13 +269,13 @@ table tr:nth-child(odd) {
 }
 @keyframes txtAn {
     0% {
-        color: rgb(0, 255, 255);
+        color: var(--cor-p);
     }
     50% {
-        color: white;
+        color: var(--cor-s);
     }
     100% {
-        color: rgb(0, 255, 255);
+        color: var(--cor-p);
     }
 }
 @keyframes rotateNeon {

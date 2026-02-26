@@ -99,7 +99,8 @@ function requisitar() {
             row.appendChild(numero)
             tableJogadores.appendChild(row)
         })
-        
+        document.body.style.setProperty('--cor-p', pCor);
+        document.body.style.setProperty('--cor-s', sCor);
         alertar('valido')
         ipt.value = ""
         ipt.focus()
