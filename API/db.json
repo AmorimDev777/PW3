@@ -1,58 +1,835 @@
 {
-  "selecoes": [
-    {
-      "id": "1b82",
-      "nome": "Brasil",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png",
-      "grupo": "G",
-      "conquistas": [
+    "selecoes":[
         {
-          "ano": 1958,
-          "pais": "Suécia"
+            "id":  "1",
+            "nome": "Brasil",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Brazilian_Football_Confederation_logo.svg/250px-Brazilian_Football_Confederation_logo.svg.png",
+            "grupo": "C",
+            "tecnico": "Carlo Ancelotti",
+            "cores":{
+                "principal": "rgb(255, 223, 0)",
+                "secundaria": "rgb(0, 39, 118)"
+            },
+            "conquistas":[
+                {
+                    "ano": 1958,
+                    "pais": "Suécia"
+                },
+                {
+                    "ano": 1962,
+                    "pais": "Chile"
+                },
+                {
+                    "ano": 1970,
+                    "pais": "México"
+                },
+                {
+                    "ano": 1994,
+                    "pais": "Estados Unidos"
+                },
+                {
+                    "ano": 2002,
+                    "pais": "Coreia do Sul/Japão"
+                }
+            ], 
+            "jogadores": [
+                {
+                    "id": "1",
+                    "nome": "Neymar",
+                    "camisa": 10,
+                    "posicao": "Atacante",
+                    "titular": true,
+                    "gols": 79
+                },
+                {
+                    "id": "2",
+                    "nome": "Alisson",
+                    "camisa": 1,
+                    "posicao": "Goleiro",
+                    "titular": true,
+                    "gols": 0
+                },
+                {
+                    "id": "3",
+                    "nome": "Casemiro",
+                    "camisa": 5,
+                    "posicao": "Volante",
+                    "titular": true,
+                    "gols": 12
+                },
+                {
+                    "id": "4",
+                    "nome": "Philippe Coutinho",
+                    "camisa": 11,
+                    "posicao": "Meio-campista",
+                    "titular": false,
+                    "gols": 20
+                },
+                {
+                    "id": "5",
+                    "nome": "Gabriel Jesus",
+                    "camisa": 9,
+                    "posicao": "Atacante",
+                    "titular": false,
+                    "gols": 22
+                },
+                {
+                    "id": "6",
+                    "nome": "Richarlison",
+                    "camisa": 7,
+                    "posicao": "Atacante",
+                    "titular": false,
+                    "gols": 18
+                },
+                {
+                    "id": "7",
+                    "nome": "Marquinhos",
+                    "camisa": 3,
+                    "posicao": "Zagueiro",
+                    "titular": true,
+                    "gols": 5
+                },
+                {
+                    "id": "8",
+                    "nome": "Thiago Silva",
+                    "camisa": 2,
+                    "posicao": "Zagueiro",
+                    "titular": true,
+                    "gols": 8
+                },
+                {
+                    "id": "9",
+                    "nome": "Arthur",
+                    "camisa": 6,
+                    "posicao": "Meio-campista",
+                    "titular": false,
+                    "gols": 6
+                },
+                {
+                    "id": "10",
+                    "nome": "Alex Sandro",
+                    "camisa": 12,
+                    "posicao": "Lateral-esquerdo",
+                    "titular": true,
+                    "gols": 2
+                },
+                {
+                    "id": "11",
+                    "nome": "Dani Alves",
+                    "camisa": 13,
+                    "posicao": "Lateral-direito",
+                    "titular": true,
+                    "gols": 10
+                },
+                {
+                    "id": "12",
+                    "nome": "Fred",
+                    "camisa": 15,
+                    "posicao": "Meio-campista",
+                    "titular": false,
+                    "gols": 17
+                },
+                {
+                    "id": "13",
+                    "nome": "Eder Militao",
+                    "camisa": 4,
+                    "posicao": "Zagueiro",
+                    "titular": true,
+                    "gols": 3
+                },
+                {
+                    "id": "14",
+                    "nome": "Roberto Firmino",
+                    "camisa": 18,
+                    "posicao": "Atacante",
+                    "titular": false,
+                    "gols": 15
+                },
+                {
+                    "id": "15",
+                    "nome": "Lucas Paquetá",
+                    "camisa": 17,
+                    "posicao": "Meio-campista",
+                    "titular": false,
+                    "gols": 9
+                },
+                {
+                    "id": "16",
+                    "nome": "Renan Lodi",
+                    "camisa": 16,
+                    "posicao": "Lateral-esquerdo",
+                    "titular": false,
+                    "gols": 1
+                },
+                {
+                    "id": "17",
+                    "nome": "Gabriel Martinelli",
+                    "camisa": 19,
+                    "posicao": "Atacante",
+                    "titular": false,
+                    "gols": 11
+                },
+                {
+                    "id": "18",
+                    "nome": "Vinícius Júnior",
+                    "camisa": 20,
+                    "posicao": "Atacante",
+                    "titular": true,
+                    "gols": 25
+                },
+                {
+                    "id": "19",
+                    "nome": "Rodrygo",
+                    "camisa": 21,
+                    "posicao": "Atacante",
+                    "titular": true,
+                    "gols": 14
+                },
+                {
+                    "id": "20",
+                    "nome": "Guilherme Arana",
+                    "camisa": 22,
+                    "posicao": "Lateral-esquerdo",
+                    "titular": false,
+                    "gols": 2
+                },
+                {
+                    "id": "21",
+                    "nome": "Bruno Guimarães",
+                    "camisa": 23,
+                    "posicao": "Meio-campista",
+                    "titular": true,
+                    "gols": 7
+                },
+                {
+                    "id": "22",
+                    "nome": "Felipe Melo",
+                    "camisa": 24,
+                    "posicao": "Volante",
+                    "titular": false,
+                    "gols": 4
+                },
+                {
+                    "id": "23",
+                    "nome": "Ederson",
+                    "camisa": 25,
+                    "posicao": "Goleiro",
+                    "titular": true,
+                    "gols": 0
+                },
+                {
+                    "id": "24",
+                    "nome": "Rodrigo Caio",
+                    "camisa": 26,
+                    "posicao": "Zagueiro",
+                    "titular": false,
+                    "gols": 2
+                },
+                {
+                    "id": "25",
+                    "nome": "Gabriel Barbosa",
+                    "camisa": 27,
+                    "posicao": "Atacante",
+                    "titular": false,
+                    "gols": 13
+                }
+            ]
         },
         {
-          "ano": 1962,
-          "pais": "Chile"
+            "id":  "2",
+            "nome": "Espanha",
+            "logo": "https://upload.wikimedia.org/wikipedia/pt/3/31/Spain_National_Football_Team_badge.png",
+            "grupo": "H",
+            "tecnico": "Luis de la Fuente",
+            "cores":{
+                "principal": "rgb(198, 0, 0)",
+                "secundaria": "rgb(255, 204, 0)"
+            },
+            "conquistas":[
+                {
+                    "ano": 2010,
+                    "pais": "África do Sul"
+                }
+            ], 
+            "jogadores":[
+                {
+                    "id":  "1",
+                    "nome": "Lamine Yamal",
+                    "camisa": 10,
+                    "posicao": "Ponta",
+                    "titular": true,
+                    "gols": 13
+                },
+                {
+                    "id": "2",
+                    "nome": "Dani Carvajal",
+                    "camisa": 2,
+                    "posicao": "Lateral-direito",
+                    "titular": true,
+                    "gols": 3
+                },
+                {
+                    "id": "3",
+                    "nome": "Jordi Alba",
+                    "camisa": 18,
+                    "posicao": "Lateral-esquerdo",
+                    "titular": true,
+                    "gols": 5
+                },
+                {
+                    "id": "4",
+                    "nome": "Sergio Ramos",
+                    "camisa": 15,
+                    "posicao": "Zagueiro",
+                    "titular": false,
+                    "gols": 23
+                },
+                {
+                    "id": "5",
+                    "nome": "Gerard Piqué",
+                    "camisa": 3,
+                    "posicao": "Zagueiro",
+                    "titular": false,
+                    "gols": 12
+                },
+                {
+                    "id": "6",
+                    "nome": "Aymeric Laporte",
+                    "camisa": 14,
+                    "posicao": "Zagueiro",
+                    "titular": true,
+                    "gols": 4
+                },
+                {
+                    "id": "7",
+                    "nome": "Pedri",
+                    "camisa": 8,
+                    "posicao": "Meio-campista",
+                    "titular": true,
+                    "gols": 7
+                },
+                {
+                    "id": "8",
+                    "nome": "Gavi",
+                    "camisa": 6,
+                    "posicao": "Meio-campista",
+                    "titular": true,
+                    "gols": 6
+                },
+                {
+                    "id": "9",
+                    "nome": "Rodri",
+                    "camisa": 16,
+                    "posicao": "Volante",
+                    "titular": true,
+                    "gols": 2
+                },
+                {
+                    "id": "10",
+                    "nome": "Koke",
+                    "camisa": 14,
+                    "posicao": "Meio-campista",
+                    "titular": false,
+                    "gols": 8
+                },
+                {
+                    "id": "11",
+                    "nome": "Saúl Ñíguez",
+                    "camisa": 21,
+                    "posicao": "Meio-campista",
+                    "titular": false,
+                    "gols": 4
+                },
+                {
+                    "id": "12",
+                    "nome": "Marco Asensio",
+                    "camisa": 11,
+                    "posicao": "Meio-campista",
+                    "titular": false,
+                    "gols": 20
+                },
+                {
+                    "id": "13",
+                    "nome": "Ferran Torres",
+                    "camisa": 19,
+                    "posicao": "Atacante",
+                    "titular": true,
+                    "gols": 9
+                },
+                {
+                    "id": "14",
+                    "nome": "Alvaro Morata",
+                    "camisa": 9,
+                    "posicao": "Atacante",
+                    "titular": true,
+                    "gols": 27
+                },
+                {
+                    "id": "15",
+                    "nome": "Ansu Fati",
+                    "camisa": 10,
+                    "posicao": "Atacante",
+                    "titular": false,
+                    "gols": 6
+                },
+                {
+                    "id": "16",
+                    "nome": "Mikel Oyarzabal",
+                    "camisa": 7,
+                    "posicao": "Atacante",
+                    "titular": false,
+                    "gols": 13
+                },
+                {
+                    "id": "17",
+                    "nome": "Dani Olmo",
+                    "camisa": 8,
+                    "posicao": "Meio-campista",
+                    "titular": false,
+                    "gols": 5
+                },
+                {
+                    "id": "18",
+                    "nome": "Bryan Gil",
+                    "camisa": 17,
+                    "posicao": "Atacante",
+                    "titular": false,
+                    "gols": 2
+                },
+                {
+                    "id": "19",
+                    "nome": "Yeremy Pino",
+                    "camisa": 22,
+                    "posicao": "Atacante",
+                    "titular": false,
+                    "gols": 3
+                },
+                {
+                    "id": "20",
+                    "nome": "Unai Simón",
+                    "camisa": 1,
+                    "posicao": "Goleiro",
+                    "titular": true,
+                    "gols": 0
+                },
+                {
+                    "id": "21",
+                    "nome": "David de Gea",
+                    "camisa": 13,
+                    "posicao": "Goleiro",
+                    "titular": false,
+                    "gols": 0
+                },
+                {
+                    "id": "22",
+                    "nome": "Iñigo Martínez",
+                    "camisa": 4,
+                    "posicao": "Zagueiro",
+                    "titular": false,
+                    "gols": 1
+                },
+                {
+                    "id": "23",
+                    "nome": "Javi Martínez",
+                    "camisa": 22,
+                    "posicao": "Volante",
+                    "titular": false,
+                    "gols": 3
+                },
+                {
+                    "id": "24",
+                    "nome": "César Azpilicueta",
+                    "camisa": 5,
+                    "posicao": "Lateral-direito",
+                    "titular": false,
+                    "gols": 2
+                },
+                {
+                    "id": "25",
+                    "nome": "Adama Traoré",
+                    "camisa": 20,
+                    "posicao": "Atacante",
+                    "titular": false,
+                    "gols": 1
+                },
+                {
+                    "id": "26",
+                    "nome": "Pau Torres",
+                    "camisa": 24,
+                    "posicao": "Zagueiro",
+                    "titular": false,
+                    "gols": 0
+                }
+            ]
         },
         {
-          "ano": 1970,
-          "pais": "México"
+            "id": "3",
+            "nome": "Alemanha",
+            "logo": "https://images.vexels.com/media/users/3/152460/isolated/preview/825e80bac186d247dd9332f1440d20df-logo-do-time-de-futebol-da-alemanha.png?w=360",
+            "grupo": "A",
+            "tecnico": "Julian Nagelsmann",
+            "cores": {
+                "principal": "rgb(255, 255, 255)",
+                "secundaria": "rgb(255, 0, 0)"
+            },
+            "conquistas": [
+                { "ano": 1954, "pais": "Suíça" },
+                { "ano": 1974, "pais": "Alemanha" },
+                { "ano": 1990, "pais": "Itália" },
+                { "ano": 2014, "pais": "Brasil" }
+            ],
+            "jogadores": [
+                { "id": "1", "nome": "Manuel Neuer", "camisa": 1, "posicao": "Goleiro", "titular": true, "gols": 0 },
+                { "id": "2", "nome": "Toni Kroos", "camisa": 8, "posicao": "Meio-campista", "titular": true, "gols": 17 },
+                { "id": "3", "nome": "Thomas Müller", "camisa": 13, "posicao": "Atacante", "titular": true, "gols": 38 },
+                { "id": "4", "nome": "Joshua Kimmich", "camisa": 6, "posicao": "Volante", "titular": true, "gols": 6 },
+                { "id": "5", "nome": "Kai Havertz", "camisa": 11, "posicao": "Atacante", "titular": false, "gols": 16 }
+            ]
         },
         {
-          "ano": 1994,
-          "pais": "Estados Unidos"
+            "id": "4",
+            "nome": "Argentina",
+            "logo": "https://upload.wikimedia.org/wikipedia/pt/f/fc/230px-Afa_logo.svg.png",
+            "grupo": "B",
+            "tecnico": "Lionel Scaloni",
+            "cores": {
+                "principal": "rgb(117, 174, 255)",
+                "secundaria": "rgb(255, 255, 255)"
+            },
+            "conquistas": [
+                { "ano": 1978, "pais": "Argentina" },
+                { "ano": 1986, "pais": "México" },
+                { "ano": 2022, "pais": "Qatar" }
+            ],
+            "jogadores": [
+                { "id": "1", "nome": "Lionel Messi", "camisa": 10, "posicao": "Atacante", "titular": true, "gols": 104 },
+                { "id": "2", "nome": "Ángel Di María", "camisa": 11, "posicao": "Atacante", "titular": false, "gols": 35 },
+                { "id": "3", "nome": "Lautaro Martínez", "camisa": 22, "posicao": "Atacante", "titular": true, "gols": 21 },
+                { "id": "4", "nome": "Emiliano Martínez", "camisa": 23, "posicao": "Goleiro", "titular": true, "gols": 0 },
+                { "id": "5", "nome": "Leandro Paredes", "camisa": 5, "posicao": "Meio-campista", "titular": false, "gols": 3 }
+            ]
         },
         {
-          "ano": 2002,
-          "pais": "Coreia do Sul/Japão"
-        }
-      ],
-      "jogadores": [
-        {
-          "id": 1,
-          "nome": "Neymar",
-          "camisa": 10,
-          "posicao": "Atacante",
-          "titular": true,
-          "gols": 79
+            "id": "5",
+            "nome": "Inglaterra",
+            "logo": "https://logodownload.org/wp-content/uploads/2022/07/england-national-team-logo-1.png",
+            "grupo": "C",
+            "tecnico": "Gareth Southgate",
+            "cores": {
+                "principal": "rgb(255,255,255)",
+                "secundaria": "rgb(0,0,255)"
+            },
+            "conquistas": [
+                { "ano": 1966, "pais": "Inglaterra" }
+            ],
+            "jogadores": [
+                { "id": "1", "nome": "Harry Kane", "camisa": 9, "posicao": "Atacante", "titular": true, "gols": 58 },
+                { "id": "2", "nome": "Raheem Sterling", "camisa": 10, "posicao": "Atacante", "titular": true, "gols": 20 },
+                { "id": "3", "nome": "Phil Foden", "camisa": 7, "posicao": "Meio-campista", "titular": false, "gols": 10 },
+                { "id": "4", "nome": "Jordan Pickford", "camisa": 1, "posicao": "Goleiro", "titular": true, "gols": 0 },
+                { "id": "5", "nome": "Bukayo Saka", "camisa": 11, "posicao": "Atacante", "titular": false, "gols": 5 }
+            ]
         },
         {
-          "id": 2,
-          "nome": "Alisson",
-          "camisa": 1,
-          "posicao": "Goleiro",
-          "titular": true,
-          "gols": 0
+            "id": "6",
+            "nome": "Holanda",
+            "logo": "https://upload.wikimedia.org/wikipedia/pt/a/a1/Netherlands_national_football_team_logo_2017.png",
+            "grupo": "D",
+            "tecnico": "Ronald Koeman",
+            "cores": {
+                "principal": "rgb(255,102,0)",
+                "secundaria": "rgb(255,255,255)"
+            },
+            "conquistas": [],
+            "jogadores": [
+                { "id": "1", "nome": "Virgil van Dijk", "camisa": 4, "posicao": "Zagueiro", "titular": true, "gols": 6 },
+                { "id": "2", "nome": "Frenkie de Jong", "camisa": 21, "posicao": "Meio-campista", "titular": true, "gols": 4 },
+                { "id": "3", "nome": "Memphis Depay", "camisa": 10, "posicao": "Atacante", "titular": true, "gols": 20 },
+                { "id": "4", "nome": "Matthijs de Ligt", "camisa": 3, "posicao": "Zagueiro", "titular": false, "gols": 2 },
+                { "id": "5", "nome": "Georginio Wijnaldum", "camisa": 8, "posicao": "Meio-campista", "titular": false, "gols": 11 }
+            ]
         },
         {
-          "id": 3,
-          "nome": "Casemiro",
-          "camisa": 5,
-          "posicao": "Volante",
-          "titular": true,
-          "gols": 12
-        }
-      ]
-    }
+            "id": "7",
+            "nome": "Uruguai",
+            "logo": "https://images.vexels.com/media/users/3/152681/isolated/preview/6a0f68291b3109113e2231045202ef55-logo-do-time-de-futebol-do-uruguai.png",
+            "grupo": "G",
+            "tecnico": "Diego Alonso",
+            "cores": {
+                "principal": "rgb(0, 82, 180)",
+                "secundaria": "rgb(255, 255, 255)"
+            },
+            "conquistas": [
+                { "ano": 1930, "pais": "Uruguai" },
+                { "ano": 1950, "pais": "Brasil" }
+            ],
+            "jogadores": [
+                { "id": "1", "nome": "Luis Suárez", "camisa": 9, "posicao": "Atacante", "titular": true, "gols": 68 },
+                { "id": "2", "nome": "Edinson Cavani", "camisa": 21, "posicao": "Atacante", "titular": false, "gols": 58 },
+                { "id": "3", "nome": "Federico Valverde", "camisa": 15, "posicao": "Meio-campista", "titular": true, "gols": 12 },
+                { "id": "4", "nome": "Rodrigo Bentancur", "camisa": 14, "posicao": "Meio-campista", "titular": false, "gols": 3 },
+                { "id": "5", "nome": "Fernando Muslera", "camisa": 1, "posicao": "Goleiro", "titular": true, "gols": 0 }
+            ]
+        },
+        {
+            "id": "8",
+            "nome": "França",
+            "logo": "https://upload.wikimedia.org/wikipedia/pt/2/25/Logo_Sele%C3%A7%C3%A3o_Francesa_2018.png",
+            "grupo": "H",
+            "tecnico": "Didier Deschamps",
+            "cores": {
+                "principal": "rgb(0,85,164)",
+                "secundaria": "rgb(255,255,255)"
+            },
+            "conquistas": [
+                { "ano": 1998, "pais": "França" },
+                { "ano": 2018, "pais": "Rússia" }
+            ],
+            "jogadores": [
+                { "id": "1", "nome": "Kylian Mbappé", "camisa": 10, "posicao": "Atacante", "titular": true, "gols": 32 },
+                { "id": "2", "nome": "Antoine Griezmann", "camisa": 7, "posicao": "Atacante", "titular": true, "gols": 34 },
+                { "id": "3", "nome": "Paul Pogba", "camisa": 6, "posicao": "Meio-campista", "titular": false, "gols": 10 },
+                { "id": "4", "nome": "Hugo Lloris", "camisa": 1, "posicao": "Goleiro", "titular": true, "gols": 0 },
+                { "id": "5", "nome": "N'Golo Kanté", "camisa": 13, "posicao": "Volante", "titular": false, "gols": 4 }
+            ]
+        },
+        {
+            "id": "9",
+            "nome": "Portugal",
+            "logo": "https://images.vexels.com/media/users/3/152592/isolated/preview/96d97eadc822aafbc7062c6646da0c47-logo-da-selecao-portuguesa-de-futebol.png?w=360",
+            "grupo": "E",
+            "tecnico": "Fernando Santos",
+            "cores": {
+                "principal": "rgb(255,0,0)",
+                "secundaria": "rgb(0, 102, 0)"
+            },
+            "conquistas": [],
+            "jogadores": [
+                { "id": "1", "nome": "Cristiano Ronaldo", "camisa": 7, "posicao": "Atacante", "titular": true, "gols": 118 },
+                { "id": "2", "nome": "Bruno Fernandes", "camisa": 18, "posicao": "Meio-campista", "titular": true, "gols": 30 },
+                { "id": "3", "nome": "Bernardo Silva", "camisa": 20, "posicao": "Meio-campista", "titular": true, "gols": 12 },
+                { "id": "4", "nome": "João Cancelo", "camisa": 3, "posicao": "Lateral-direito", "titular": false, "gols": 2 },
+                { "id": "5", "nome": "Pepe", "camisa": 3, "posicao": "Zagueiro", "titular": false, "gols": 7 }
+            ]
+        },
+        {
+            "id": "10",
+            "nome": "México",
+            "logo": "https://upload.wikimedia.org/wikipedia/pt/thumb/f/f3/Mexico_national_football_team_crest_%282022%29.png/250px-Mexico_national_football_team_crest_%282022%29.png",
+            "grupo": "D",
+            "tecnico": "Gerardo Martino",
+            "cores": {
+                "principal": "rgb(0, 104, 71)",
+                "secundaria": "rgb(255, 255, 255)"
+            },
+            "conquistas": [],
+            "jogadores": [
+                { "id": "1", "nome": "Guillermo Ochoa", "camisa": 13, "posicao": "Goleiro", "titular": true, "gols": 0 },
+                { "id": "2", "nome": "Hirving Lozano", "camisa": 22, "posicao": "Atacante", "titular": true, "gols": 16 },
+                { "id": "3", "nome": "Raúl Jiménez", "camisa": 9, "posicao": "Atacante", "titular": true, "gols": 31 },
+                { "id": "4", "nome": "Andrés Guardado", "camisa": 18, "posicao": "Meio-campista", "titular": false, "gols": 17 },
+                { "id": "5", "nome": "Jesús Corona", "camisa": 5, "posicao": "Lateral-esquerdo", "titular": false, "gols": 2 }
+            ]
+        },
+        {
+            "id": "11",
+            "nome": "Japão",
+            "logo": "https://logodetimes.com/times/japao/selecao-japonesa-de-futebol-4096.png",
+            "grupo": "F",
+            "tecnico": "Hajime Moriyasu",
+            "cores": {
+                "principal": "rgb(0, 45, 114)",
+                "secundaria": "rgb(255, 255, 255)"
+            },
+            "conquistas": [],
+            "jogadores": [
+                { "id": "1", "nome": "Shuichi Gonda", "camisa": 12, "posicao": "Goleiro", "titular": true, "gols": 0 },
+                { "id": "2", "nome": "Takehiro Tomiyasu", "camisa": 16, "posicao": "Zagueiro", "titular": true, "gols": 1 },
+                { "id": "3", "nome": "Maya Yoshida", "camisa": 22, "posicao": "Zagueiro", "titular": true, "gols": 12 },
+                { "id": "4", "nome": "Yuto Nagatomo", "camisa": 5, "posicao": "Lateral-esquerdo", "titular": true, "gols": 4 },
+                { "id": "5", "nome": "Wataru Endo", "camisa": 6, "posicao": "Meio-campista", "titular": true, "gols": 2 },
+                { "id": "6", "nome": "Daichi Kamada", "camisa": 15, "posicao": "Meio-campista", "titular": true, "gols": 7 },
+                { "id": "7", "nome": "Takefusa Kubo", "camisa": 11, "posicao": "Atacante", "titular": true, "gols": 3 },
+                { "id": "8", "nome": "Takumi Minamino", "camisa": 10, "posicao": "Atacante", "titular": true, "gols": 17 },
+                { "id": "9", "nome": "Ritsu Doan", "camisa": 8, "posicao": "Atacante", "titular": false, "gols": 5 },
+                { "id": "10", "nome": "Takuma Asano", "camisa": 18, "posicao": "Atacante", "titular": false, "gols": 8 }
+            ]
+        },
+        {
+            "id": "12",
+            "nome": "Estados Unidos",
+            "logo": "https://logodetimes.com/times/estados-unidos/selecao-de-futebol-dos-estados-unidos-4096.png",
+            "grupo": "A",
+            "tecnico": "Gregg Berhalter",
+            "cores": {
+                "principal": "rgb(191, 10, 48)",
+                "secundaria": "rgb(0, 40, 104)"
+            },
+            "conquistas": [],
+            "jogadores": [
+                { "id": "1", "nome": "Christian Pulisic", "camisa": 10, "posicao": "Atacante", "titular": true, "gols": 28 },
+                { "id": "2", "nome": "Weston McKennie", "camisa": 8, "posicao": "Meio-campista", "titular": true, "gols": 11 },
+                { "id": "3", "nome": "Tyler Adams", "camisa": 4, "posicao": "Volante", "titular": true, "gols": 2 },
+                { "id": "4", "nome": "Gio Reyna", "camisa": 7, "posicao": "Meio-campista", "titular": false, "gols": 6 },
+                { "id": "5", "nome": "Matt Turner", "camisa": 1, "posicao": "Goleiro", "titular": true, "gols": 0 }
+            ]
+        },
+        {
+            "id": "13",
+            "nome": "Canadá",
+            "logo": "https://upload.wikimedia.org/wikipedia/pt/thumb/7/7a/Logotipo_Sele%C3%A7%C3%A3o_Canad%C3%A1.png/250px-Logotipo_Sele%C3%A7%C3%A3o_Canad%C3%A1.png",
+            "grupo": "B",
+            "tecnico": "Jesse Marsch",
+            "cores": {
+                "principal": "rgb(255, 0, 0)",
+                "secundaria": "rgb(255, 255, 255)"
+            },
+            "conquistas": [],
+            "jogadores": [
+                { "id": "1", "nome": "Alphonso Davies", "camisa": 19, "posicao": "Lateral-esquerdo", "titular": true, "gols": 15 },
+                { "id": "2", "nome": "Jonathan David", "camisa": 20, "posicao": "Atacante", "titular": true, "gols": 26 },
+                { "id": "3", "nome": "Cyle Larin", "camisa": 17, "posicao": "Atacante", "titular": true, "gols": 29 },
+                { "id": "4", "nome": "Stephen Eustáquio", "camisa": 7, "posicao": "Meio-campista", "titular": true, "gols": 4 },
+                { "id": "5", "nome": "Milan Borjan", "camisa": 1, "posicao": "Goleiro", "titular": true, "gols": 0 }
+            ]
+        },
+        {
+            "id": "14",
+            "nome": "Itália",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Logo_Italy_National_Football_Team_-_2023.svg/500px-Logo_Italy_National_Football_Team_-_2023.svg.png",
+            "grupo": "E",
+            "tecnico": "Luciano Spalletti",
+            "cores": {
+                "principal": "rgb(0, 57, 166)",
+                "secundaria": "rgb(255, 255, 255)"
+            },
+            "conquistas": [
+                { "ano": 1934, "pais": "Itália" },
+                { "ano": 1938, "pais": "França" },
+                { "ano": 1982, "pais": "Espanha" },
+                { "ano": 2006, "pais": "Alemanha" }
+            ],
+            "jogadores": [
+                { "id": "1", "nome": "Gianluigi Donnarumma", "camisa": 1, "posicao": "Goleiro", "titular": true, "gols": 0 },
+                { "id": "2", "nome": "Nicolò Barella", "camisa": 18, "posicao": "Meio-campista", "titular": true, "gols": 9 },
+                { "id": "3", "nome": "Federico Chiesa", "camisa": 14, "posicao": "Atacante", "titular": true, "gols": 7 },
+                { "id": "4", "nome": "Jorginho", "camisa": 8, "posicao": "Volante", "titular": false, "gols": 5 },
+                { "id": "5", "nome": "Ciro Immobile", "camisa": 17, "posicao": "Atacante", "titular": false, "gols": 17 }
+            ]
+        },
+        {
+            "id": "15",
+            "nome": "Bélgica",
+            "logo": "https://images.seeklogo.com/logo-png/42/2/escudo-selecao-da-belgica-logo-png_seeklogo-424470.png",
+            "grupo": "F",
+            "tecnico": "Domenico Tedesco",
+            "cores": {
+                "principal": "rgb(0, 0, 0)",
+                "secundaria": "rgb(255, 0, 0)"
+            },
+            "conquistas": [],
+            "jogadores": [
+                { "id": "1", "nome": "Kevin De Bruyne", "camisa": 7, "posicao": "Meio-campista", "titular": true, "gols": 26 },
+                { "id": "2", "nome": "Romelu Lukaku", "camisa": 9, "posicao": "Atacante", "titular": true, "gols": 75 },
+                { "id": "3", "nome": "Thibaut Courtois", "camisa": 1, "posicao": "Goleiro", "titular": true, "gols": 0 },
+                { "id": "4", "nome": "Yannick Carrasco", "camisa": 11, "posicao": "Atacante", "titular": false, "gols": 10 },
+                { "id": "5", "nome": "Youri Tielemans", "camisa": 8, "posicao": "Meio-campista", "titular": true, "gols": 9 }
+            ]
+        },
+        {
+            "id": "16",
+            "nome": "Croácia",
+            "logo": "https://upload.wikimedia.org/wikipedia/pt/thumb/c/cf/Croatia_football_federation.png/250px-Croatia_football_federation.png",
+            "grupo": "G",
+            "tecnico": "Zlatko Dalić",
+            "cores": {
+                "principal": "rgb(255, 0, 0)",
+                "secundaria": "rgb(255, 255, 255)"
+            },
+            "conquistas": [],
+            "jogadores": [
+                { "id": "1", "nome": "Luka Modrić", "camisa": 10, "posicao": "Meio-campista", "titular": true, "gols": 24 },
+                { "id": "2", "nome": "Ivan Perišić", "camisa": 4, "posicao": "Atacante", "titular": true, "gols": 33 },
+                { "id": "3", "nome": "Marcelo Brozović", "camisa": 11, "posicao": "Volante", "titular": true, "gols": 7 },
+                { "id": "4", "nome": "Joško Gvardiol", "camisa": 20, "posicao": "Zagueiro", "titular": true, "gols": 2 },
+                { "id": "5", "nome": "Dominik Livaković", "camisa": 1, "posicao": "Goleiro", "titular": true, "gols": 0 }
+            ]
+        },
+        {
+            "id": "17",
+            "nome": "Marrocos",
+            "logo": "https://upload.wikimedia.org/wikipedia/pt/thumb/7/71/F%C3%A9d%C3%A9ration_Royale_Marocaine_de_Football.png/250px-F%C3%A9d%C3%A9ration_Royale_Marocaine_de_Football.png",
+            "grupo": "H",
+            "tecnico": "Walid Regragui",
+            "cores": {
+                "principal": "rgb(193, 39, 45)",
+                "secundaria": "rgb(0, 122, 61)"
+            },
+            "conquistas": [],
+            "jogadores": [
+                { "id": "1", "nome": "Achraf Hakimi", "camisa": 2, "posicao": "Lateral-direito", "titular": true, "gols": 8 },
+                { "id": "2", "nome": "Hakim Ziyech", "camisa": 7, "posicao": "Atacante", "titular": true, "gols": 20 },
+                { "id": "3", "nome": "Yassine Bounou", "camisa": 1, "posicao": "Goleiro", "titular": true, "gols": 0 },
+                { "id": "4", "nome": "Sofyan Amrabat", "camisa": 4, "posicao": "Volante", "titular": true, "gols": 1 },
+                { "id": "5", "nome": "Youssef En-Nesyri", "camisa": 19, "posicao": "Atacante", "titular": true, "gols": 18 }
+            ]
+        },
+        {
+            "id": "18",
+            "nome": "Senegal",
+            "logo": "https://upload.wikimedia.org/wikipedia/pt/7/7c/FSenegalaiseF.png",
+            "grupo": "A",
+            "tecnico": "Aliou Cissé",
+            "cores": {
+                "principal": "rgb(0, 122, 61)",
+                "secundaria": "rgb(255, 205, 0)"
+            },
+            "conquistas": [],
+            "jogadores": [
+                { "id": "1", "nome": "Sadio Mané", "camisa": 10, "posicao": "Atacante", "titular": true, "gols": 40 },
+                { "id": "2", "nome": "Kalidou Koulibaly", "camisa": 3, "posicao": "Zagueiro", "titular": true, "gols": 3 },
+                { "id": "3", "nome": "Édouard Mendy", "camisa": 16, "posicao": "Goleiro", "titular": true, "gols": 0 },
+                { "id": "4", "nome": "Idrissa Gueye", "camisa": 5, "posicao": "Volante", "titular": true, "gols": 7 },
+                { "id": "5", "nome": "Ismaïla Sarr", "camisa": 18, "posicao": "Atacante", "titular": true, "gols": 11 }
+            ]
+        },
+        {
+            "id": "19",
+            "nome": "Suiça",
+            "logo": "https://upload.wikimedia.org/wikipedia/pt/thumb/9/96/SFV_Logo.svg.png/250px-SFV_Logo.svg.png",
+            "grupo": "B",
+            "tecnico": "Murat Yakin",
+            "cores": {
+                "principal": "rgb(255, 0, 0)",
+                "secundaria": "rgb(255, 255, 255)"
+            },
+            "conquistas": [],
+            "jogadores": [
+                { "id": "1", "nome": "Granit Xhaka", "camisa": 10, "posicao": "Meio-campista", "titular": true, "gols": 14 },
+                { "id": "2", "nome": "Xherdan Shaqiri", "camisa": 23, "posicao": "Atacante", "titular": true, "gols": 27 },
+                { "id": "3", "nome": "Yann Sommer", "camisa": 1, "posicao": "Goleiro", "titular": true, "gols": 0 },
+                { "id": "4", "nome": "Breel Embolo", "camisa": 7, "posicao": "Atacante", "titular": true, "gols": 14 },
+                { "id": "5", "nome": "Manuel Akanji", "camisa": 5, "posicao": "Zagueiro", "titular": true, "gols": 3 }
+            ]
+        },
+        {
+            "id": "20",
+            "nome": "Colômbia",
+            "logo": "https://upload.wikimedia.org/wikipedia/pt/4/47/Federacion_Colombiana_de_Futbol_logo.svg.png",
+            "grupo": "E",
+            "tecnico": "Néstor Lorenzo",
+            "cores": {
+                "principal": "rgb(255, 205, 0)",
+                "secundaria": "rgb(0, 56, 168)"
+            },
+            "conquistas": [],
+            "jogadores": [
+                { "id": "1", "nome": "James Rodríguez", "camisa": 10, "posicao": "Meio-campista", "titular": true, "gols": 28 },
+                { "id": "2", "nome": "Luis Díaz", "camisa": 7, "posicao": "Atacante", "titular": true, "gols": 15 },
+                { "id": "3", "nome": "Radamel Falcao", "camisa": 9, "posicao": "Atacante", "titular": false, "gols": 36 },
+                { "id": "4", "nome": "Juan Cuadrado", "camisa": 11, "posicao": "Meio-campista", "titular": false, "gols": 10 },
+                { "id": "5", "nome": "David Ospina", "camisa": 1, "posicao": "Goleiro", "titular": true, "gols": 0 }
+            ]
+      }
   ]
 }
