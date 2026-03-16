@@ -25,6 +25,23 @@ body {
 *::-webkit-scrollbar{
     background: rgb(24, 24, 24);
 }
+.voltarBtn {
+    position: fixed;
+    
+    color: white;
+    font-size: clamp(16px, 2.5vw, 70px);
+    top: 3vh;
+    left: 3vw;
+    z-index: 9999;
+    transition: .15s;
+    border-radius: 50rem;
+}
+.voltarBtn:hover {
+    color: gray;
+}
+.voltarBtn:active {
+    transform: translateX(-1vw);
+}
 .selecoesContainer {
     display: grid;
     align-content: center;
@@ -33,7 +50,6 @@ body {
 
     gap: 20px;
 }
-
 .cardSelecoes {
     box-shadow: 0 0 35px black, 0 0 15px black inset;
     background: rgb(29, 29, 29);
@@ -77,14 +93,15 @@ body {
 .cardSelecoes h3 {
     color: white;
 }
-.boxBtnVerJogadores {
-    background: black;
-    animation: rotationNeon 3s linear infinite;
-    border-radius: 10px;
-    padding: 3px;
-    transition: .3s;
+.containerBtns {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    gap: 25px;
 }
-.btnVerJogadores {
+.btnVerJogadores,
+.btnDelSelecao {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,9 +109,18 @@ body {
     cursor: pointer;
     background: black;
     color: white;
-    border: none;
+    border: solid 3px black;
     padding: 10px;
     border-radius: 7px;
+    transition: .3s;
+    width: 50%;
+}
+.btnDelSelecao {
+    background: rgb(255, 80, 80);
+    border: solid 3px rgb(255, 80, 80);
+}
+.btnDelSelecao:hover {
+    filter: brightness(0.7);
 }
 .divJogadores {
     display: none;

@@ -1,6 +1,15 @@
-import { getSelecoes } from '../../services/selecoes.service.js'
+import { getSelecoes, deleteSelecao } from '../../services/selecoes.service.js'
 
 let selecoesContainer = document.querySelector('.selecoesContainer')
+
+const removeSelecao = async(id)=>{
+    try{
+        const result = await deleteSelecao(id)
+        return result;
+    }catch(error){
+        console.log(error.message)
+    }
+}
 
 function renderSelecoes(lista) {
     lista.forEach(selecao => {
@@ -14,8 +23,9 @@ function renderSelecoes(lista) {
                         color: transparent">${ selecao.nome }</h1>
                     <h2>Téc: ${ selecao.tecnico }</h2>
                     <h3>Grupo: ${ selecao.grupo }</h3>
-                    <div class="boxBtnVerJogadores">
-                        <button class="btnVerJogadores">Ver jogadores</button>
+                    <div class="containerBtns">
+                        <button class="btnVerJogadores">Jogadores</button>
+                        <button class="btnDelSelecao" data-id="${selecao.id}" id="btnDel">Deletar</button>
                     </div>
                     <div class="divJogadores">
                         ${renderJogadores(selecao.jogadores)}
@@ -40,15 +50,10 @@ function renderSelecoes(lista) {
     const containerJogadores = document.querySelector('.jogadoresContainer')
     
     allCards.forEach(card => {
-        const box = card.querySelector('.boxBtnVerJogadores')
         const btn = card.querySelector('.btnVerJogadores')
         const boxJogadores = card.querySelectorAll('.boxJogador')
-        // const allJogadoresNome = boxJogadores.querySelectorAll('p#nome')
-        // const allJogadoresCamisa = boxJogadores.querySelectorAll('p#camisa')
-        // const allJogadoresPosicao = boxJogadores.querySelectorAll('p#Posicao')
         let color1 = card.getAttribute('data-color1')
         let color2 = card.getAttribute('data-color2')
-        console.log(boxJogadores)
     
         card.addEventListener('mouseover', () => {
             const color = card.getAttribute('data-color1')
@@ -71,10 +76,10 @@ function renderSelecoes(lista) {
             containerJogadores.classList.remove('hidden')
         })
         btn.addEventListener('mouseover', () => {
-            box.style.background = color1
+            btn.style.borderColor = color1
         })
         btn.addEventListener('mouseout', () => {
-            box.style.background = 'black'
+            btn.style.borderColor = 'black'
         }) 
     })
     
@@ -86,6 +91,7 @@ function renderSelecoes(lista) {
 }
 
 function renderJogadores(lista) {
+    if (!lista) return
     let ps = '';
     lista.forEach(jogador => {        
         ps += `
@@ -97,14 +103,6 @@ function renderJogadores(lista) {
     })
     return ps;
 }
-
-// function renderJogadores(lista) {
-//     let ps = '';
-//     lista.forEach(jogador => {        
-//         ps += `<p>${jogador.nome}</p>`;
-//     })
-//     return ps;
-// }
 
 function addJogador(box, atributo, attJogador) {
     const pAtributo = attJogador.querySelector('#' + atributo + '')
@@ -121,6 +119,25 @@ function putJogadores(lista) {
         containerJogadores.appendChild(p)
     })
 }
+
+selecoesContainer.addEventListener("click", async(e) =>{
+    e.preventDefault();
+
+    const button = e.target.closest("#btnDel")
+
+    if(!button) return;
+
+    const id = button.dataset.id;
+
+    const confirmar = confirm("Certeza que deseja excluir essa seleção?");
+
+    if(!confirmar) return;
+
+    await removeSelecao(id);
+
+    location.reload();
+
+})
 
 const selecoes = await getSelecoes()
 renderSelecoes(selecoes)
