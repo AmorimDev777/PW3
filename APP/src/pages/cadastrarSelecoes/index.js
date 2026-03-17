@@ -32,9 +32,22 @@ form.addEventListener("submit", async (e)=>{
         tecnico: inputTecnico.value,
         logo: inputLogo.value,
         grupo: selectGrupo.value,
-        cores: [color1.value, color2.value]
+        cores: {
+            principal: color1.value,
+            secundaria: color2.value
+        }
     }
 
     const result = await createSelecao(data);
+    alert(data.nome + " foi criado(a) com sucesso!!!")
     console.log("Seleção criada:", result);
+    const ipts = form.querySelectorAll('input')
+    flagPreview.src = '';
+    ipts.forEach(ipt => {
+        if (ipt.type !== 'color') {
+            ipt.value = ''
+            return
+        }
+        ipt.value = "#000000"
+    })
 })

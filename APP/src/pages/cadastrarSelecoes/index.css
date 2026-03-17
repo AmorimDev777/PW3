@@ -1,45 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    padding: 0;
-    margin: 0;
-    outline: 0;
-    transition: .2s;
-}
 body {
-    background: linear-gradient(to bottom, rgb(27, 27, 27), black);
-    background-attachment: fixed;
-    padding: 50px;
-    height: 100vh;
-    gap: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-*::-webkit-scrollbar-thumb {
-    background: rgb(255, 255, 255);
-    box-shadow: 0 0 15px black;
-    border-radius: 50rem;
-}
-*::-webkit-scrollbar {
-    background: rgb(24, 24, 24);
-}
-.voltarBtn {
-    position: fixed;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
-    color: white;
-    font-size: clamp(16px, 2.5vw, 70px);
-    top: 3vh;
-    left: 3vw;
-    z-index: 9999;
-    transition: .15s;
-    border-radius: 50rem;
+    padding: 50px;
 }
-.voltarBtn:hover {
-    color: gray;
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 40px;
 }
-.voltarBtn:active {
-    transform: translateX(-1vw);
+form div {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    background: gray;
+    width: 100%;
+}
+form label {
+    position: absolute;
+}
+form input {
+    width: 100%;
+}
+form button {
+    background: black;
+    border: none;
+}
+.boxFlagPreview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxFlagPreview img {
+    object-fit: contain;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+form, .boxFlagPreview {
+    background: white;
+    width: 30vw;
+    aspect-ratio: 1/1;
 }

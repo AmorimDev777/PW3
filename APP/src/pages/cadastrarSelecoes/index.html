@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Seleções</title>
-    <link rel="stylesheet" href="/src/pages/cadastrarSelecoes/index.css">
     <link rel="shortcut icon" href="https://www.ogol.com.br//img/logos/edicoes/176026_imgbank_.png" type="image/x-icon">
+    <link rel="stylesheet" href="/src/pages/cadastrarSelecoes/index.css">
+    <link rel="stylesheet" href="../../../src/styles/base.css">
+    <link rel="stylesheet" href="../../../src/styles/theme.css">
     <link 
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -13,30 +14,31 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" 
     />
+    <title>Cadastrar Seleções</title>
 </head>
 <body>
     <a href="../../../index.html" class="voltarBtn"><i class="fa-solid fa-arrow-left"></i></a>
-    <div class="bg-white w-[400px] p-[20px] rounded-lg shadow-lg shadow-indigo-400/50 flex flex-col justify-around items-center">
-        <h1 class="font-bold text-[22px] p-[15px]">CADASTRAR SELEÇÃO</h1>
-        <form id="formPostSelecao" class="flex flex-col gap-[15px] w-[85%] p-[10px] m-[10px]">
-            <div class="flex flex-col">
-                <label class="font-medium" for="">Nome</label>
-                <input class="outline-none border-b-2 transition-all duration-[0.3s] focus:border-indigo-600" id="nomeSelecao" type="text" required>
-            </div>
 
-            <div class="flex flex-col">
-                <label class="font-medium" for="">Técnico</label>
-                <input class="outline-none border-b-2 transition-all duration-[0.3s] focus:border-indigo-600" id="tecnicoSelecao" type="text" required>
+    <div class="container">
+        <form id="formPostSelecao">
+            <div>
+                <label for="">Nome</label>
+                <input id="nomeSelecao" type="text" required>
             </div>
-
-            <div class="flex flex-col">
-                <label class="font-medium" for="">Logo (Link/Url)</label>
-                <input class="outline-none border-b-2 transition-all duration-[0.3s] focus:border-indigo-600" id="logoSelecao" type="text" required>
+            
+            <div>
+                <label for="">Logo (Link/Url)</label>
+                <input id="logoSelecao" type="text" required>
             </div>
-
-            <div class="flex flex-col">
-                <label class="font-medium" for="">Grupo</label>
-                <select class="block w-full px-3 py-2 bg-white border border-default-medium text-sm rounded-lg shadow-md placeholder:text-body" id="grupoSelect">
+            
+            <div>
+                <label for="">Técnico</label>
+                <input id="tecnicoSelecao" type="text" required>
+            </div>
+            
+            <div>
+                <label for="">Grupo</label>
+                <select id="grupoSelect">
                     <option value="A">A</option>
                     <option value="B">B</option>
                     <option value="C">C</option>
@@ -51,22 +53,23 @@
                     <option value="L">L</option>
                 </select>
             </div>
-
-            <div class="w-full">
-                <label class="font-medium">Cores</label>
-                <div class="flex">
-                    <input class="w-[40px] h-[40px]" type="color" id="color1" required>
-                    <input class="w-[40px] h-[40px]" type="color" id="color2" required>
+            
+            <div>
+                <label>Cores</label>
+                <div>
+                    <input type="color" id="color1" required>
+                    <input type="color" id="color2" required>
                 </div>
             </div>
-
-            <button class="p-[10px] mt-[10px] font-medium bg-gray-100 rounded-xl cursor-pointer shadow-lg transition-all duration-[0.3s] hover:bg-indigo-600 hover:text-white hover:scale-110 active:scale-90 active:shadow-none active:bg-zinc-300" type="submit">Cadastrar</button>
+            
+            <button type="submit">Cadastrar</button>
         </form>
+        
+        <div class="boxFlagPreview">
+            <img id="flagPreview" src="" alt="Image Preview">
+        </div>
     </div>
 
-    <div id="flagPreviewContainer" class="border-3 border-white/30 w-[350px] h-[350px] ml-[20px] object-contain flex items-center justify-center">
-        <img class="max-w-[350px] max-h-[300px]" id="flagPreview" src="" alt="">
-    </div>
     <script src="/src/pages/cadastrarSelecoes/index.js" type="module"></script>
 </body>
 </html>

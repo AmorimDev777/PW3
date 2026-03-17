@@ -25,7 +25,7 @@ function renderSelecoes(lista) {
                     <h3>Grupo: ${ selecao.grupo }</h3>
                     <div class="containerBtns">
                         <button class="btnVerJogadores">Jogadores</button>
-                        <button class="btnDelSelecao" data-id="${selecao.id}" id="btnDel">Deletar</button>
+                        <button class="btnDelSelecao" data-id="${selecao.id}" data-nome="${selecao.nome}" id="btnDel">Deletar</button>
                     </div>
                     <div class="divJogadores">
                         ${renderJogadores(selecao.jogadores)}
@@ -33,18 +33,7 @@ function renderSelecoes(lista) {
                 </div>
             </div>
         `
-        let nomeSelecao = selecao.nome
-        let jogadores = []
-        selecao.jogadores.forEach(jogador => {
-            jogadores.push(jogador.nome)
-        })
-
-        let selecaoJogadores = {
-            [nomeSelecao]: jogadores
-        }
-        // console.log(selecaoJogadores)
-        // console.log(selecaoJogadores.Brasil.length)
-    });
+    })
     
     const allCards = document.querySelectorAll('.cardSelecoes')
     const containerJogadores = document.querySelector('.jogadoresContainer')
@@ -91,7 +80,6 @@ function renderSelecoes(lista) {
 }
 
 function renderJogadores(lista) {
-    if (!lista) return
     let ps = '';
     lista.forEach(jogador => {        
         ps += `
@@ -121,22 +109,22 @@ function putJogadores(lista) {
 }
 
 selecoesContainer.addEventListener("click", async(e) =>{
-    e.preventDefault();
+    e.preventDefault()
 
     const button = e.target.closest("#btnDel")
 
-    if(!button) return;
+    if(!button) return
+    
+    const id = button.dataset.id
+    const nome = button.dataset.nome
 
-    const id = button.dataset.id;
+    const confirmar = confirm("Você realmente quer excluir " + nome + "?")
 
-    const confirmar = confirm("Certeza que deseja excluir essa seleção?");
+    if(!confirmar) return
 
-    if(!confirmar) return;
+    await removeSelecao(id)
 
-    await removeSelecao(id);
-
-    location.reload();
-
+    location.reload()
 })
 
 const selecoes = await getSelecoes()
