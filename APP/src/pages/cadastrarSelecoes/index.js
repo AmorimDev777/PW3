@@ -35,7 +35,9 @@ form.addEventListener("submit", async (e)=>{
         cores: {
             principal: color1.value,
             secundaria: color2.value
-        }
+        },
+        conquistas: [],
+        jogadores: []
     }
 
     const result = await createSelecao(data);

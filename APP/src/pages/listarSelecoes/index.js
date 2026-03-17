@@ -14,7 +14,7 @@ const removeSelecao = async(id)=>{
 function renderSelecoes(lista) {
     lista.forEach(selecao => {
         selecoesContainer.innerHTML += `
-            <div class="cardSelecoes" data-color1="${ selecao.cores.principal }" data-color2="${ selecao.cores.secundaria }" style="border:solid 3px ${ selecao.cores.principal }">
+            <div class="cardSelecoes" data-color1="${ selecao.cores.principal }" data-color2="${ selecao.cores.secundaria }">
                 <div class="insetCardSelecoes">
                     <img src="${ selecao.logo }" alt="">
                     <h1 style="
@@ -45,11 +45,10 @@ function renderSelecoes(lista) {
         let color2 = card.getAttribute('data-color2')
     
         card.addEventListener('mouseover', () => {
-            const color = card.getAttribute('data-color1')
-            card.style.boxShadow = `0 0 20px ${color}, 0 0 15px black inset`
+            card.style.borderColor = color1
         })
         card.addEventListener('mouseout', () => {
-            card.style.boxShadow = '0 0 35px black, 0 0 15px black inset'
+            card.style.borderColor = 'RGB(24,24,24)'
         })
         btn.addEventListener('click', () => {
             boxJogadores.forEach(pJogador => {

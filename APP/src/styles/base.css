@@ -27,7 +27,7 @@
     font-size: clamp(16px, 2.5vw, 70px);
     top: 3vh;
     left: 3vw;
-    z-index: 9999;
+    z-index: 99;
     transition: .15s;
     border-radius: 50rem;
 }
