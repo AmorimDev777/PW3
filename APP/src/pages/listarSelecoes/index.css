@@ -1,59 +1,87 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 50px;
+}
+.spanFilter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    width: 90%;
+}
+.spanFilter input {
+    border: none;
+    padding: 1.1vw 1.6vw;
+    width: 100%;
+    font-size: clamp(8px, 1.2vw, 70px);
+    border-radius: 50rem;
+}
+.spanFilter i {
+    position: absolute;
+
+    pointer-events: none;
+    background: white;
+    right: 1.4vw;
+    padding: 1vw;
+}
 .selecoesContainer {
     display: grid;
     align-content: center;
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 70px;
+    gap: 40px;
 }
 .cardSelecoes {
-    box-shadow: 0 0 35px black, 0 0 15px black inset;
-    border: solid 3px rgb(24, 24, 24);
-    background: rgb(29, 29, 29);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    box-shadow: 0 0 35px black;
+    /* border: solid 3px rgb(41, 41, 41); */
+    background: rgb(41, 41, 41);
     border-radius: 30px;
     padding: 40px;
+    gap: 10px;
     transition: .3s;
 }
 .cardSelecoes:hover {
-    scale: 1.05;
-}
-.insetCardSelecoes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    box-shadow: 0 0 25px black inset;
-    background: rgb(24, 24, 24);
-    border-radius: 15px;
-    padding: 40px;
-    height: 100%;
-    gap: 10px;
+    background: rgb(63, 63, 63);
+    scale: 1.02;
+    /* border-color: rgb(75, 75, 75); */
 }
 .cardSelecoes img {
-    width: 50%;
+    width: 12vw;
     aspect-ratio: 1/1;
     object-fit: contain;
 }
-.cardSelecoes h1 {
+.cardSelecoes h1,
+.cardSelecoes h2,
+.cardSelecoes h3 {
     text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
+    
+    width: 100%;
+}
+.cardSelecoes h1 {
     font-size: clamp(20px, 2.7vw, 100px);
 }
 .cardSelecoes h2 {
-    text-align: center;
     color: white;
+    font-size: clamp(14px, 1.7vw, 80px);
 }
 .cardSelecoes h3 {
-    color: white;
+    color: rgb(216, 216, 216);
+    font-size: clamp(10px, 1.2vw, 70px);
 }
 .containerBtns {
     display: flex;
     justify-content: center;
-
+    
     width: 100%;
     gap: 25px;
 }
@@ -66,17 +94,18 @@
     cursor: pointer;
     background: black;
     color: white;
-    border: solid 3px black;
-    padding: 10px;
-    border-radius: 7px;
+    border: none;
+    font-size: clamp(8px, 1vw, 64px);
+    padding: 1vw;
+    border-radius: 0.4vw;
     transition: .3s;
     width: 50%;
 }
 .btnDelSelecao {
-    background: rgb(255, 80, 80);
-    border: solid 3px rgb(255, 80, 80);
+    background: rgb(255, 68, 68);
 }
-.btnDelSelecao:hover {
+.btnDelSelecao:hover,
+.btnVerJogadores:hover {
     filter: brightness(0.7);
 }
 .divJogadores {
@@ -106,19 +135,15 @@
     justify-content: center;
     flex-direction: column;
 
-    background: white;
-    box-shadow: 0 0 15px black, 0 0 15px black inset;
-    filter: brightness(0.4) grayscale(1);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 15px black;
     border-radius: 20px;
     padding: 20px;
     transition: .3s;
 }
-.jogadoresContainer div:hover {
-    filter: brightness(1);
-    scale: 1.05;
-}
 .jogadoresContainer p {
     text-align: center;
+    
     color: black;
 }
 .jogadoresContainer p:nth-child(1) {

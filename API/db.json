@@ -1489,6 +1489,84 @@
           "gols": 0
         }
       ]
+    },
+    {
+      "id": "5fbb",
+      "nome": "BMW",
+      "tecnico": "Dono da BMW",
+      "logo": "https://i2.wp.com/www.highspeedbrazil.com.br/wp-content/uploads/2017/03/bmw.png?ssl=1",
+      "grupo": "L",
+      "cores": {
+        "principal": "#4aa5d1",
+        "secundaria": "#f7f7f7"
+      },
+      "conquistas": [],
+      "jogadores": []
+    },
+    {
+      "id": "de77",
+      "nome": "Adidas All Stars",
+      "tecnico": "Dono da Adidas",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png",
+      "grupo": "A",
+      "cores": {
+        "principal": "#ffffff",
+        "secundaria": "#000000"
+      },
+      "conquistas": [],
+      "jogadores": []
+    },
+    {
+      "id": "04c5",
+      "nome": "Real Madruga",
+      "tecnico": "Seu Madruga",
+      "logo": "https://supercopapioneer.com.br/wp-content/uploads/2018/03/ZS-Real-Madruga.png",
+      "grupo": "C",
+      "cores": {
+        "principal": "#fabf2b",
+        "secundaria": "#1a569e"
+      },
+      "conquistas": [],
+      "jogadores": []
+    },
+    {
+      "id": "068a",
+      "nome": "Cambridge United",
+      "tecnico": "😏😏😏",
+      "logo": "https://upload.wikimedia.org/wikipedia/pt/0/04/Cambridge_United_FC_Logo.png",
+      "grupo": "G",
+      "cores": {
+        "principal": "#fdba48",
+        "secundaria": "#000000"
+      },
+      "conquistas": [],
+      "jogadores": []
+    },
+    {
+      "id": "fa41",
+      "nome": "Pau Fc",
+      "tecnico": "😏😏😏",
+      "logo": "https://tmssl.akamaized.net//images/wappen/big/3166.png?lm=1652729405",
+      "grupo": "K",
+      "cores": {
+        "principal": "#1c203e",
+        "secundaria": "#f0ce12"
+      },
+      "conquistas": [],
+      "jogadores": []
+    },
+    {
+      "id": "4258",
+      "nome": "Arábia Saudita",
+      "tecnico": "Hervé Renard",
+      "logo": "https://upload.wikimedia.org/wikipedia/pt/0/01/SAFF.png",
+      "grupo": "H",
+      "cores": {
+        "principal": "#105930",
+        "secundaria": "#ffffff"
+      },
+      "conquistas": [],
+      "jogadores": []
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

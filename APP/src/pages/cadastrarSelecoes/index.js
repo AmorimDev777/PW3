@@ -12,7 +12,7 @@ const color2 = document.getElementById("color2");
 
 const flagPreview = document.getElementById("flagPreview");
 
-inputLogo.addEventListener("change", ()=>{
+inputLogo.addEventListener("input", ()=>{
     flagPreview.src = inputLogo.value;
 })
 

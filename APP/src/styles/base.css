@@ -32,7 +32,7 @@
     border-radius: 50rem;
 }
 .voltarBtn:hover {
-    color: gray;
+    filter: brightness(0.7);
 }
 .voltarBtn:active {
     transform: translateX(-1vw);

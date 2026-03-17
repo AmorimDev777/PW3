@@ -8,7 +8,10 @@ body {
     justify-content: center;
     align-items: center;
     
-    padding: 50px;
+    background: white;
+    padding: 30px;
+    gap: 20px;
+    border-radius: 20px;
 }
 form {
     display: flex;
@@ -18,23 +21,78 @@ form {
 
     padding: 40px;
 }
-form div {
+.divIpt {
     display: flex;
     align-items: center;
     position: relative;
 
-    background: gray;
     width: 100%;
 }
-form label {
+.divIpt label {
     position: absolute;
+
+    pointer-events: none;
+    left: 15px;
+    font-size: 14px;
 }
-form input {
+.divIpt input {
+    background: transparent;
+    border: none;
+    border-bottom: solid 3px black;
+    width: 100%;
+    padding: 5px;
+    padding-bottom: 8px;
+    font-size: 14px;
+}
+.divIpt input:focus + label {
+    transform: translateY(-120%);
+    font-size: 12px;
+}
+.divIpt input:valid + label {
+    transform: translateY(-120%);
+    font-size: 12px;
+}
+.divSlct {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    gap: 20px;
+}
+.divSlct select {
+    border: none;
+    background: white;
+    width: 50%;
+}
+.divColors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+}
+.divColors div {
+    display: flex;
+    
+    width: 100%;
+}
+.divColors input {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    height: 40px;
     width: 100%;
 }
 form button {
     background: black;
     border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 100%;
 }
 .boxFlagPreview {
     display: flex;
@@ -45,9 +103,14 @@ form button {
     object-fit: contain;
     width: 100%;
     aspect-ratio: 1/1;
+    -moz-force-broken-image-icon: 0;
+    visibility: hidden;
+}
+.boxFlagPreview img:not([src=""]) {
+    visibility: visible;
 }
 form, .boxFlagPreview {
-    background: white;
     width: 30vw;
     aspect-ratio: 1/1;
+    height: 100%;
 }
