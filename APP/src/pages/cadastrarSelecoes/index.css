@@ -117,3 +117,15 @@ form, .boxFlagPreview {
     aspect-ratio: 1/1;
     height: 100%;
 }
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    form {
+        gap: 10px;
+    }
+    form, .boxFlagPreview {
+        width: 55vw;
+    }
+}

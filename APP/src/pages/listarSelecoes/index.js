@@ -20,7 +20,11 @@ function renderSelecoes(lista) {
         if (!tirarAcentos(selecao.nome.toLowerCase()).includes(inputTxt)) return
 
         selecoesContainer.innerHTML += `
-        <div class="cardSelecoes" data-color1="${ selecao.cores.principal }" data-color2="${ selecao.cores.secundaria }">
+        <div class="cardSelecoes"
+            data-nome="${ selecao.nome }"
+            data-color1="${ selecao.cores.principal }"
+            data-color2="${ selecao.cores.secundaria }"
+        >
             <img src="${ selecao.logo }" alt="">
             <h1 style="
                 background: linear-gradient(to bottom, ${ selecao.cores.principal }, ${ selecao.cores.secundaria });
@@ -29,72 +33,87 @@ function renderSelecoes(lista) {
             <h2>Téc: ${ selecao.tecnico }</h2>
             <h3>Grupo: ${ selecao.grupo }</h3>
             <div class="containerBtns">
-                <button class="btnVerJogadores">Jogadores</button>
+                <button class="btnVerJogadores">Ver Mais</button>
                 <button class="btnDelSelecao" data-id="${selecao.id}" data-nome="${selecao.nome}" id="btnDel">Deletar</button>
             </div>
             <div class="divJogadores">
-                ${renderJogadores(selecao.jogadores)}
+            ${renderJogadores(selecao.jogadores)}
             </div>
-        </div>
-        `
+            </div>
+            `
     })
     
     const allCards = document.querySelectorAll('.cardSelecoes')
-    const containerJogadores = document.querySelector('.jogadoresContainer')
+    const containerDetalhes = document.querySelector('.containerDetalhes')
     
     allCards.forEach(card => {
         const btn = card.querySelector('.btnVerJogadores')
-        const boxJogadores = card.querySelectorAll('.boxJogador')
+        let nome = card.getAttribute('data-nome')
         let color1 = card.getAttribute('data-color1')
         let color2 = card.getAttribute('data-color2')
 
         btn.addEventListener('click', () => {
-            boxJogadores.forEach(pJogador => {
-                const div = document.createElement('div')
-                addJogador(div, 'nome', pJogador)
-                addJogador(div, 'camisa', pJogador)
-                addJogador(div, 'posicao', pJogador)
-                containerJogadores.appendChild(div)
+            lista.forEach(selecao => {
+                if (selecao.nome != nome) return
+                containerDetalhes.innerHTML = `
+                    <img src="${ selecao.logo }" alt="">
+                    <h1 style="
+                        background: linear-gradient(to bottom, ${ selecao.cores.principal }, ${ selecao.cores.secundaria });
+                        background-clip: text;
+                        color: transparent">${ selecao.nome }</h1>
+                    <h2>Téc: ${ selecao.tecnico }</h2>
+                    <h3>Grupo: ${ selecao.grupo }</h3>
+                    <div class="boxInfos">
+                        <div class="boxConquistas">
+                            ${ renderConquistas(selecao.conquistas) }    
+                        </div>
+                        <div class="boxJogadores">
+                            ${ renderJogadores(selecao.jogadores) }
+                        </div>
+                    </div>
+                `
             })
             document.body.style.overflow = 'hidden'
-            containerJogadores.classList.remove('hidden')
+            containerDetalhes.classList.remove('hidden')
         })
     })
     
-    containerJogadores.addEventListener('click', () => {
+    containerDetalhes.addEventListener('click', () => {
         document.body.style.overflow = 'auto'
-        containerJogadores.classList.add('hidden')
-        containerJogadores.innerHTML = ''
+        containerDetalhes.classList.add('hidden')
+        containerDetalhes.innerHTML = ''
     })
 }
 
 function renderJogadores(lista) {
     let ps = '';
+    if (lista.length <= 0) return "<h1 class='semJogadores'>Seleção Sem Jogadores</h1>"
+    lista.sort((a, b) => a.nome.localeCompare(b.nome))
     lista.forEach(jogador => {        
         ps += `
         <div class="boxJogador">
         <p id="nome">${jogador.nome}</p>
-        <p id="camisa">${jogador.camisa}</p>
+        <p id="camisa">Camisa ${jogador.camisa}</p>
         <p id="posicao">${jogador.posicao}</p>
+        <p id="gols">${jogador.gols} Gols Pela Seleção</p>
+        <p id="titular">${jogador.titular ? 'É Titular' : 'Não é Titular'}</p>
         </div>`;
     })
     return ps;
 }
-
-function addJogador(box, atributo, attJogador) {
-    const pAtributo = attJogador.querySelector('#' + atributo + '')
-    const atributoElem = document.createElement('p')
-    atributoElem.textContent = pAtributo.textContent
-    box.appendChild(atributoElem)
-}
-
-function putJogadores(lista) {
-    const containerJogadores = document.querySelector('.jogadoresContainer')
-    lista.forEach(jogador => {        
-        const p = document.createElement('p')
-        p.textContent = jogador.nome
-        containerJogadores.appendChild(p)
+function renderConquistas(lista) {
+    let ps = '';
+    if (lista.length <= 0) return "<h1 class='semConquistas'>Seleção Sem Conquistas</h1>"
+    lista.sort((a, b) => a.ano - b.ano)
+    lista.forEach(conquista => {        
+        ps += `
+        <div class="boxConquista">
+            <p id="trofeu">🏆</p>
+            <p id="pais">${conquista.pais}</p>
+            <p id="ano">${conquista.ano}</p>
+        </div>`;
     })
+    return ps;
 }
 
 function tirarAcentos(palavra) {

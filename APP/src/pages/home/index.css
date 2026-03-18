@@ -55,3 +55,9 @@ main img {
     height: 80%;
     aspect-ratio: 1/1;
 }
+
+@media (max-width: 460px) {
+    main img {
+        height: 50%;
+    }
+}

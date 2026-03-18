@@ -1504,19 +1504,6 @@
       "jogadores": []
     },
     {
-      "id": "de77",
-      "nome": "Adidas All Stars",
-      "tecnico": "Dono da Adidas",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png",
-      "grupo": "A",
-      "cores": {
-        "principal": "#ffffff",
-        "secundaria": "#000000"
-      },
-      "conquistas": [],
-      "jogadores": []
-    },
-    {
       "id": "04c5",
       "nome": "Real Madruga",
       "tecnico": "Seu Madruga",
@@ -1564,6 +1551,19 @@
       "cores": {
         "principal": "#105930",
         "secundaria": "#ffffff"
+      },
+      "conquistas": [],
+      "jogadores": []
+    },
+    {
+      "id": "1f09",
+      "nome": "Coreia do Sul",
+      "tecnico": "Hong Myung-bo",
+      "logo": "https://upload.wikimedia.org/wikipedia/pt/a/a7/South_Korea_national_football_team_logo.png",
+      "grupo": "A",
+      "cores": {
+        "principal": "#ff4747",
+        "secundaria": "#000000"
       },
       "conquistas": [],
       "jogadores": []

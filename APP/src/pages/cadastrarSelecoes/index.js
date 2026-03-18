@@ -44,6 +44,7 @@ form.addEventListener("submit", async (e)=>{
     const result = await createSelecao(data);
     alert(data.nome + " foi criado(a) com sucesso!!!")
     console.log("Seleção criada:", result);
+    window.location.href = '/src/pages/listarSelecoes'
     const ipts = form.querySelectorAll('input')
     flagPreview.src = '';
     ipts.forEach(ipt => {
