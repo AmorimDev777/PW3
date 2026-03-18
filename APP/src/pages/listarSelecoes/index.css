@@ -32,7 +32,7 @@ body {
     display: grid;
     align-content: center;
     justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 40px;
 }
@@ -43,7 +43,6 @@ body {
     flex-direction: column;
 
     box-shadow: 0 0 35px black;
-    /* border: solid 3px rgb(41, 41, 41); */
     background: rgb(41, 41, 41);
     border-radius: 30px;
     padding: 40px;
@@ -53,10 +52,9 @@ body {
 .cardSelecoes:hover {
     background: rgb(63, 63, 63);
     scale: 1.02;
-    /* border-color: rgb(75, 75, 75); */
 }
 .cardSelecoes img {
-    width: 12vw;
+    width: 6vw;
     aspect-ratio: 1/1;
     object-fit: contain;
 }
@@ -68,22 +66,22 @@ body {
     width: 100%;
 }
 .cardSelecoes h1 {
-    font-size: clamp(20px, 2.7vw, 100px);
+    font-size: clamp(16px, 1.8vw, 80px);
 }
 .cardSelecoes h2 {
     color: white;
-    font-size: clamp(14px, 1.7vw, 80px);
+    font-size: clamp(10px, 1.2vw, 65px);
 }
 .cardSelecoes h3 {
     color: rgb(216, 216, 216);
-    font-size: clamp(10px, 1.2vw, 70px);
+    font-size: clamp(6px, 1.1vw, 55px);
 }
 .containerBtns {
     display: flex;
     justify-content: center;
     
     width: 100%;
-    gap: 25px;
+    gap: 20px;
 }
 .btnVerJogadores,
 .btnDelSelecao {
@@ -95,8 +93,8 @@ body {
     background: black;
     color: white;
     border: none;
-    font-size: clamp(8px, 1vw, 64px);
-    padding: 1vw;
+    font-size: clamp(8px, 0.9vw, 60px);
+    padding: 0.8vw;
     border-radius: 0.4vw;
     transition: .3s;
     width: 50%;
@@ -156,9 +154,6 @@ body {
 .jogadoresContainer p:nth-child(3) {
     font-size: 24px;
     color: rgb(54, 54, 54);
-}
-.hidden {
-    visibility: hidden;
 }
 
 @media (max-width: 800px) {

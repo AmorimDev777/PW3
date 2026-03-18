@@ -8,18 +8,17 @@ body {
     justify-content: center;
     align-items: center;
     
-    background: white;
-    padding: 30px;
-    gap: 20px;
-    border-radius: 20px;
+    box-shadow: 0 0 15px black;
+    height: 75vh;
 }
 form {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-
-    padding: 40px;
+    
+    background: rgba(255, 255, 255, 0.349);
+    padding: 4vw;
 }
 .divIpt {
     display: flex;
@@ -98,6 +97,10 @@ form button {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    border: solid 2px rgba(255, 255, 255, 0.349);
+    box-shadow: 0 0 15px black inset;
+    padding: 3vw;
 }
 .boxFlagPreview img {
     object-fit: contain;
@@ -110,7 +113,7 @@ form button {
     visibility: visible;
 }
 form, .boxFlagPreview {
-    width: 30vw;
+    width: 35vw;
     aspect-ratio: 1/1;
     height: 100%;
 }

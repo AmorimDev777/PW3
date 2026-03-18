@@ -37,3 +37,6 @@
 .voltarBtn:active {
     transform: translateX(-1vw);
 }
+.hidden {
+    visibility: hidden;
+}

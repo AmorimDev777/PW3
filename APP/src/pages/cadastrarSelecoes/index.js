@@ -1,16 +1,17 @@
 import { postSelecao } from "../../services/selecoes.service.js";
 
-const form = document.getElementById("formPostSelecao");
+const form = document.querySelector("#formPostSelecao");
 
-const inputNome = document.getElementById("nomeSelecao");
-const inputTecnico = document.getElementById("tecnicoSelecao");
-const inputLogo = document.getElementById("logoSelecao");
-const selectGrupo = document.getElementById("grupoSelect");
+const inputNome = document.querySelector("#nomeSelecao");
+const inputTecnico = document.querySelector("#tecnicoSelecao");
+const inputLogo = document.querySelector("#logoSelecao");
+const selectGrupo = document.querySelector("#grupoSelect");
 
-const color1 = document.getElementById("color1");
-const color2 = document.getElementById("color2");
+const color1 = document.querySelector("#color1");
+const color2 = document.querySelector("#color2");
 
-const flagPreview = document.getElementById("flagPreview");
+const boxFlagPreview = document.querySelector(".boxFlagPreview")
+const flagPreview = document.querySelector("#flagPreview");
 
 inputLogo.addEventListener("input", ()=>{
     flagPreview.src = inputLogo.value;
@@ -20,7 +21,7 @@ const createSelecao = async(data) =>{
     try{
         const result = await postSelecao(data);
         return result;
-    }catch(error){
+    } catch(error){
         console.log(error.message);
     }
 }
