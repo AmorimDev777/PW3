@@ -17,7 +17,7 @@ form {
     align-items: center;
     flex-direction: column;
     
-    background: rgba(255, 255, 255, 0.349);
+    background: white;
     padding: 4vw;
 }
 .divIpt {
@@ -60,7 +60,6 @@ form {
 }
 .divSlct select {
     cursor: pointer;
-    border: none;
     background: white;
     width: 50%;
     padding: 5px;
@@ -101,7 +100,7 @@ form button {
     justify-content: center;
     align-items: center;
 
-    border: solid 2px rgba(255, 255, 255, 0.349);
+    border: solid 2px white;
     box-shadow: 0 0 15px black inset;
     padding: 3vw;
 }

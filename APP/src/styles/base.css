@@ -34,9 +34,6 @@
 .voltarBtn:hover {
     filter: brightness(0.7);
 }
-.voltarBtn:active {
-    transform: translateX(-1vw);
-}
 .hidden {
     visibility: hidden;
 }

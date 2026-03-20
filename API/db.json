@@ -1042,16 +1042,14 @@
       ]
     },
     {
-      "id": "12",
       "nome": "Estados Unidos",
       "logo": "https://logodetimes.com/times/estados-unidos/selecao-de-futebol-dos-estados-unidos-4096.png",
-      "grupo": "A",
       "tecnico": "Gregg Berhalter",
+      "grupo": "D",
       "cores": {
-        "principal": "rgb(191, 10, 48)",
-        "secundaria": "rgb(0, 40, 104)"
+        "principal": "#bf0a30",
+        "secundaria": "#002868"
       },
-      "conquistas": [],
       "jogadores": [
         {
           "id": "1",
@@ -1093,7 +1091,9 @@
           "titular": true,
           "gols": 0
         }
-      ]
+      ],
+      "conquistas": [],
+      "id": "12"
     },
     {
       "id": "13",
@@ -1329,16 +1329,14 @@
       ]
     },
     {
-      "id": "18",
       "nome": "Senegal",
       "logo": "https://upload.wikimedia.org/wikipedia/pt/7/7c/FSenegalaiseF.png",
-      "grupo": "A",
       "tecnico": "Aliou Cissé",
+      "grupo": "A",
       "cores": {
-        "principal": "rgb(0, 122, 61)",
-        "secundaria": "rgb(255, 205, 0)"
+        "principal": "#007a3d",
+        "secundaria": "#ffcd00"
       },
-      "conquistas": [],
       "jogadores": [
         {
           "id": "1",
@@ -1380,19 +1378,20 @@
           "titular": true,
           "gols": 11
         }
-      ]
+      ],
+      "conquistas": [],
+      "id": "18"
     },
     {
       "id": "19",
       "nome": "Suiça",
       "logo": "https://upload.wikimedia.org/wikipedia/pt/thumb/9/96/SFV_Logo.svg.png/250px-SFV_Logo.svg.png",
-      "grupo": "B",
       "tecnico": "Murat Yakin",
+      "grupo": "B",
       "cores": {
-        "principal": "rgb(255, 0, 0)",
-        "secundaria": "rgb(255, 255, 255)"
+        "principal": "#ff0000",
+        "secundaria": "#ffffff"
       },
-      "conquistas": [],
       "jogadores": [
         {
           "id": "1",
@@ -1434,7 +1433,8 @@
           "titular": true,
           "gols": 3
         }
-      ]
+      ],
+      "conquistas": []
     },
     {
       "id": "20",
@@ -1491,58 +1491,6 @@
       ]
     },
     {
-      "id": "5fbb",
-      "nome": "BMW",
-      "tecnico": "Dono da BMW",
-      "logo": "https://i2.wp.com/www.highspeedbrazil.com.br/wp-content/uploads/2017/03/bmw.png?ssl=1",
-      "grupo": "L",
-      "cores": {
-        "principal": "#4aa5d1",
-        "secundaria": "#f7f7f7"
-      },
-      "conquistas": [],
-      "jogadores": []
-    },
-    {
-      "id": "04c5",
-      "nome": "Real Madruga",
-      "tecnico": "Seu Madruga",
-      "logo": "https://supercopapioneer.com.br/wp-content/uploads/2018/03/ZS-Real-Madruga.png",
-      "grupo": "C",
-      "cores": {
-        "principal": "#fabf2b",
-        "secundaria": "#1a569e"
-      },
-      "conquistas": [],
-      "jogadores": []
-    },
-    {
-      "id": "068a",
-      "nome": "Cambridge United",
-      "tecnico": "😏😏😏",
-      "logo": "https://upload.wikimedia.org/wikipedia/pt/0/04/Cambridge_United_FC_Logo.png",
-      "grupo": "G",
-      "cores": {
-        "principal": "#fdba48",
-        "secundaria": "#000000"
-      },
-      "conquistas": [],
-      "jogadores": []
-    },
-    {
-      "id": "fa41",
-      "nome": "Pau Fc",
-      "tecnico": "😏😏😏",
-      "logo": "https://tmssl.akamaized.net//images/wappen/big/3166.png?lm=1652729405",
-      "grupo": "K",
-      "cores": {
-        "principal": "#1c203e",
-        "secundaria": "#f0ce12"
-      },
-      "conquistas": [],
-      "jogadores": []
-    },
-    {
       "id": "4258",
       "nome": "Arábia Saudita",
       "tecnico": "Hervé Renard",
@@ -1558,15 +1506,15 @@
     {
       "id": "1f09",
       "nome": "Coreia do Sul",
-      "tecnico": "Hong Myung-bo",
       "logo": "https://upload.wikimedia.org/wikipedia/pt/a/a7/South_Korea_national_football_team_logo.png",
+      "tecnico": "Hong Myung-bo",
       "grupo": "A",
       "cores": {
         "principal": "#ff4747",
-        "secundaria": "#000000"
+        "secundaria": "#ffffff"
       },
-      "conquistas": [],
-      "jogadores": []
+      "jogadores": [],
+      "conquistas": []
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
