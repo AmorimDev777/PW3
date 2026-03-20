@@ -85,7 +85,8 @@ body {
     width: 100%;
     gap: 20px;
 }
-.btnVerJogadores,
+.btnEditSelecao,
+.btnVerDetalhesSelecao,
 .btnDelSelecao {
     display: flex;
     justify-content: center;
@@ -102,11 +103,16 @@ body {
     transition: .3s;
     width: 50%;
 }
+.btnEditSelecao {
+    color: black;
+    background: rgb(255, 174, 0);
+}
 .btnDelSelecao {
     background: rgb(255, 68, 68);
 }
+.btnEditSelecao:hover,
 .btnDelSelecao:hover,
-.btnVerJogadores:hover {
+.btnVerDetalhesSelecao:hover {
     filter: brightness(0.7);
 }
 .divJogadores {
@@ -166,7 +172,7 @@ body {
     align-content: start;
     justify-content: start;
     
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 20px;
 }
@@ -206,9 +212,11 @@ body {
     color: rgb(54, 54, 54);
 }
 .boxConquistas {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    justify-content: start;
+    align-content: start;
+
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 20px;
 }
@@ -238,6 +246,18 @@ body {
     filter: brightness(0.9);
     transition: .2s;
     scale: 1.05;
+}
+.voltarDetalhes {
+    position: fixed;
+
+    cursor: pointer;
+    color: white;
+    font-size: clamp(18px, 3vw, 80px);
+    top: 30px;
+    left: 30px;
+}
+.voltarDetalhes:hover {
+    filter: brightness(0.7);
 }
 
 @media (max-width: 900px) {

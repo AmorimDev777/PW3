@@ -1,5 +1,6 @@
-import { getSelecoes, deleteSelecao } from '../../services/selecoes.service.js'
+import { getSelecoes, deleteSelecao, putSelecao } from '../../services/selecoes.service.js'
 
+const title = document.querySelector('title')
 const selecoesContainer = document.querySelector('.selecoesContainer')
 const inputFilter = document.querySelector('.inputFilter')
 
@@ -33,29 +34,29 @@ function renderSelecoes(lista) {
             <h2>Téc: ${ selecao.tecnico }</h2>
             <h3>Grupo: ${ selecao.grupo }</h3>
             <div class="containerBtns">
-                <button class="btnVerJogadores">Ver Mais</button>
-                <button class="btnDelSelecao" data-id="${selecao.id}" data-nome="${selecao.nome}" id="btnDel">Deletar</button>
+                <button class="btnEditSelecao"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button class="btnVerDetalhesSelecao"><i class="fa-solid fa-eye"></i></button>
+                <button class="btnDelSelecao" data-id="${selecao.id}" data-nome="${selecao.nome}" id="btnDel"><i class="fa-solid fa-trash"></i></button>
             </div>
-            <div class="divJogadores">
-            ${renderJogadores(selecao.jogadores)}
-            </div>
-            </div>
-            `
+        </div>
+        `
     })
     
     const allCards = document.querySelectorAll('.cardSelecoes')
     const containerDetalhes = document.querySelector('.containerDetalhes')
     
     allCards.forEach(card => {
-        const btn = card.querySelector('.btnVerJogadores')
+        const btnDetalhes = card.querySelector('.btnVerDetalhesSelecao')
+        const btnEdit = card.querySelector('.btnEditSelecao')
         let nome = card.getAttribute('data-nome')
         let color1 = card.getAttribute('data-color1')
         let color2 = card.getAttribute('data-color2')
 
-        btn.addEventListener('click', () => {
+        btnDetalhes.addEventListener('click', () => {
             lista.forEach(selecao => {
                 if (selecao.nome != nome) return
                 containerDetalhes.innerHTML = `
+                    <i class="fa-solid fa-arrow-left voltarDetalhes"></i>
                     <img src="${ selecao.logo }" alt="">
                     <h1 style="
                         background: linear-gradient(to bottom, ${ selecao.cores.principal }, ${ selecao.cores.secundaria });
@@ -72,16 +73,19 @@ function renderSelecoes(lista) {
                         </div>
                     </div>
                 `
+                title.textContent = selecao.nome
             })
+            const voltarDetalhes = document.querySelector('.voltarDetalhes')
+            voltarDetalhes.addEventListener('click', fecharModal)
             document.body.style.overflow = 'hidden'
             containerDetalhes.classList.remove('hidden')
+            function fecharModal() {
+                title.textContent = 'Selecao'
+                document.body.style.overflow = 'auto'
+                containerDetalhes.classList.add('hidden')
+                containerDetalhes.innerHTML = ''
+            }
         })
-    })
-    
-    containerDetalhes.addEventListener('click', () => {
-        document.body.style.overflow = 'auto'
-        containerDetalhes.classList.add('hidden')
-        containerDetalhes.innerHTML = ''
     })
 }
 
@@ -92,11 +96,11 @@ function renderJogadores(lista) {
     lista.forEach(jogador => {        
         ps += `
         <div class="boxJogador">
-        <p id="nome">${jogador.nome}</p>
-        <p id="camisa">Camisa ${jogador.camisa}</p>
-        <p id="posicao">${jogador.posicao}</p>
-        <p id="gols">${jogador.gols} Gols Pela Seleção</p>
-        <p id="titular">${jogador.titular ? 'É Titular' : 'Não é Titular'}</p>
+            <p id="nome">${jogador.nome}</p>
+            <p id="camisa">Camisa ${jogador.camisa}</p>
+            <p id="posicao">${jogador.posicao}</p>
+            <p id="gols">${jogador.gols} Gols Pela Seleção</p>
+            <p id="titular">${jogador.titular ? 'É Titular' : 'Não é Titular'}</p>
         </div>`;
     })
     return ps;

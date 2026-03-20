@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.ogol.com.br//img/logos/edicoes/176026_imgbank_.png" type="image/x-icon">
+    <link rel="stylesheet" href="/src/pages/cadastrarConquistas/index.css">
+    <link rel="stylesheet" href="../../../src/styles/base.css">
+    <link rel="stylesheet" href="../../../src/styles/theme.css">
+    <link 
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" 
+    />
+    <title>Cadastrar Conquistas</title>
+</head>
+<body>
+    <a href="../../../index.html" class="voltarBtn"><i class="fa-solid fa-arrow-left"></i></a>
+
+    <div class="container">
+        <form id="formPostSelecao">
+            <div class="divIpt">
+                <input id="nomeSelecao" type="text" required>
+                <label for="">Nome</label>
+            </div>
+            
+            <div class="divIpt">
+                <input id="logoSelecao" type="text" required>
+                <label for="">Logo Url</label>
+            </div>
+            
+            <div class="divIpt">
+                <input id="tecnicoSelecao" type="text" required>
+                <label for="">Técnico</label>
+            </div>
+            
+            <div class="divSlct">
+                <label for="">Grupo</label>
+                <select id="grupoSelect">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                </select>
+            </div>
+            
+            <div class="divColors">
+                <label>Cores</label>
+                <div>
+                    <input type="color" id="color1" required>
+                    <input type="color" id="color2" required>
+                </div>
+            </div>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+        
+        <div class="boxFlagPreview">
+            <img id="flagPreview" src="" alt="Image Preview">
+        </div>
+    </div>
+
+    <script src="/src/pages/cadastrarSelecoes/index.js" type="module"></script>
+</body>
+</html>

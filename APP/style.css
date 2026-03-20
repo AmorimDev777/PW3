@@ -40,6 +40,8 @@ h1 {
 }
 div {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     
     gap: 60px;
     transition: .3s;
