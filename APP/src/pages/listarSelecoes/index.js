@@ -210,7 +210,7 @@ function renderConquistas(lista) {
 }
 
 function fecharModal(box) {
-  title.textContent = "Selecao";
+  title.textContent = "Selecoes" ;
   document.body.style.overflow = "auto";
   box.classList.add("hidden");
   box.innerHTML = "";

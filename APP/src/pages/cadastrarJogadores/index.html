@@ -20,56 +20,41 @@
     <a href="../../../index.html" class="voltarBtn"><i class="fa-solid fa-arrow-left"></i></a>
 
     <div class="container">
-        <form id="formPostSelecao">
-            <div class="divIpt">
-                <input id="nomeSelecao" type="text" required>
-                <label for="">Nome</label>
-            </div>
+        <main id="mainPutJogador">
+            <input id="nomeJogador" type="text" placeholder="Nome" required>
+            <input id="camisaJogador" type="number" placeholder="Número camisa" required>
+            <input id="golsJogador" type="number" placeholder="Número Gols" required>
+
+            <select id="posicaoSelect">
+                <option value="Atacante">Atacante</option>
+                <option value="Meio-campista">Meio-campista</option>
+                <option value="Volante">Volante</option>
+                <option value="Lateral-esquerdo">Lateral-esquerdo</option>
+                <option value="Lateral-direito">Lateral-direito</option>
+                <option value="Zagueiro">Zagueiro</option>
+                <option value="Goleiro">Goleiro</option>
+            </select>
+
+            <select id="selecoesSelect"></select>
             
-            <div class="divIpt">
-                <input id="logoSelecao" type="text" required>
-                <label for="">Logo Url</label>
-            </div>
-            
-            <div class="divIpt">
-                <input id="tecnicoSelecao" type="text" required>
-                <label for="">Técnico</label>
-            </div>
-            
-            <div class="divSlct">
-                <label for="">Grupo</label>
-                <select id="grupoSelect">
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
-                    <option value="E">E</option>
-                    <option value="F">F</option>
-                    <option value="G">G</option>
-                    <option value="H">H</option>
-                    <option value="I">I</option>
-                    <option value="J">J</option>
-                    <option value="K">K</option>
-                    <option value="L">L</option>
-                </select>
-            </div>
-            
-            <div class="divColors">
-                <label>Cores</label>
-                <div>
-                    <input type="color" id="color1" required>
-                    <input type="color" id="color2" required>
+            <div class="boxTitular">
+                <label for="">Titular:</label>
+                <div class="divTitular">
+                    <span>
+                        <label for="">Sim</label>
+                        <input type="radio" name="titular" id="simTitular">
+                    </span>
+                    <span>
+                        <label for="">Não</label>
+                        <input type="radio" name="titular" id="naoTitular">
+                    </span>
                 </div>
             </div>
             
-            <button type="submit">Cadastrar</button>
-        </form>
-        
-        <div class="boxFlagPreview">
-            <img id="flagPreview" src="" alt="Image Preview">
-        </div>
+            <button id="btnCadsJogador">Cadastrar</button>
+        </main>
     </div>
 
-    <script src="/src/pages/cadastrarSelecoes/index.js" type="module"></script>
+    <script src="/src/pages/cadastrarJogadores/index.js" type="module"></script>
 </body>
 </html>

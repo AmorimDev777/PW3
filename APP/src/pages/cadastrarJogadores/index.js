@@ -1,57 +1,103 @@
-import { postSelecao } from "../../services/selecoes.service.js";
+import { getSelecoes, putSelecao } from "../../services/selecoes.service.js"
 
-const form = document.querySelector("#formPostSelecao");
+const boxForm = document.querySelector("#mainPutJogadores")
+const nomeJogador = document.querySelector('#nomeJogador')
+const camisaJogador = document.querySelector('#camisaJogador')
+const golsJogador = document.querySelector('#golsJogador')
+const posicaoSelect = document.querySelector('#posicaoSelect')
+const selecoesSelect = document.querySelector('#selecoesSelect')
+const radioSim = document.querySelector('#simTitular')
+const radioNao = document.querySelector('#naoTitular')
+const btnCadastrar = document.querySelector('#btnCadsJogador')
 
-const inputNome = document.querySelector("#nomeSelecao");
-const inputTecnico = document.querySelector("#tecnicoSelecao");
-const inputLogo = document.querySelector("#logoSelecao");
-const selectGrupo = document.querySelector("#grupoSelect");
-
-const color1 = document.querySelector("#color1");
-const color2 = document.querySelector("#color2");
-
-const boxFlagPreview = document.querySelector(".boxFlagPreview")
-const flagPreview = document.querySelector("#flagPreview");
-
-inputLogo.addEventListener("input", ()=>{
-    flagPreview.src = inputLogo.value;
-})
-
-const createSelecao = async(data) =>{
-    try{
-        const result = await postSelecao(data);
-        return result;
-    } catch(error){
-        console.log(error.message);
-    }
+function renderSelecoesSelect(lista) {
+    lista.sort((a, b) => a.nome.localeCompare(b.nome));
+    lista.forEach(selecao => {
+        const option = document.createElement('option')
+        option.value = selecao.nome
+        option.textContent = selecao.nome
+        selecoesSelect.appendChild(option)
+    })
+    btnCadastrar.addEventListener("click", async () => {
+        eventCadastrar(lista)
+    })
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            eventCadastrar(lista)
+        }
+    })
 }
 
-form.addEventListener("submit", async (e)=>{
-    e.preventDefault();
-    const data = {
-        nome: inputNome.value,
-        tecnico: inputTecnico.value,
-        logo: inputLogo.value,
-        grupo: selectGrupo.value,
-        cores: {
-            principal: color1.value,
-            secundaria: color2.value
-        },
-        conquistas: [],
-        jogadores: []
-    }
+function verificarRadio() {
+    if (!radioSim.checked && !radioNao.checked) return 'nada'
+    if (radioSim.checked) return true
+    if (radioNao.checked) return false
+}
 
-    const result = await createSelecao(data);
-    alert(data.nome + " foi criado(a) com sucesso!!!")
-    console.log("Seleção criada:", result);
-    window.location.href = '/src/pages/listarSelecoes'
-    const ipts = form.querySelectorAll('input')
-    flagPreview.src = '';
-    ipts.forEach(ipt => {
-        if (ipt.type !== 'color') {
-            ipt.value = ''
+async function eventCadastrar(lista) {
+        let selecaoConquistas = null
+        let selecaoEncontrada = null
+        let jogId = ""
+        let jogNome = nomeJogador.value
+        let jogCamisa = Number(camisaJogador.value)
+        let jogPosicao = posicaoSelect.value
+        let jogTitular = verificarRadio()
+        let jogGols = Number(golsJogador.value)
+        let jogadoresSelecao = []
+        lista.forEach(selecao => {
+            if (selecao.nome !== selecoesSelect.value) return
+            let idLastPlayer = 0
+            selecaoEncontrada = selecao
+            selecao.jogadores.forEach(jogador => {
+                jogadoresSelecao.push(jogador)
+                idLastPlayer += 1
+            })
+            selecaoConquistas = selecao.conquistas
+            jogId = idLastPlayer + 1
+        })
+        if (!selecaoEncontrada) {
+            alert('Seleção não encontrada')
             return
         }
-        ipt.value = "#000000"
-    })
-})
+        if (jogNome.length <= 0 ||
+            jogCamisa < 0 ||
+            jogPosicao.length <= 0 ||
+            jogTitular == 'nada' ||
+            jogGols < 0
+        ) {
+            console.log('Erro ao cadastrar jogador')
+            alert('Erro ao cadastrar jogador')
+            return
+        }
+        const jogador = {
+            id: String(jogId),
+            nome: jogNome,
+            camisa: jogCamisa,
+            posicao: jogPosicao,
+            titular: jogTitular,
+            gols: jogGols,
+        }
+        jogadoresSelecao.push(jogador)
+        const dadosAtualizados = {
+            ...selecaoEncontrada,
+            conquistas: selecaoConquistas,
+            jogadores: jogadoresSelecao,
+        }
+        console.log(jogadoresSelecao)
+        console.log(dadosAtualizados)
+        try {
+            await putSelecao(selecaoEncontrada.id, dadosAtualizados)
+            alert(jogNome + " cadastrado com sucesso!")
+            location.reload()
+        } catch (error) {
+            console.error(error)
+            alert("Erro ao cadastrar jogador. Tente novamente.")
+        }
+        nomeJogador.value = ''
+        camisaJogador.value = ''
+        golsJogador.value = ''
+        nomeJogador.focus()
+}
+
+const selecoes = await getSelecoes()
+renderSelecoesSelect(selecoes)

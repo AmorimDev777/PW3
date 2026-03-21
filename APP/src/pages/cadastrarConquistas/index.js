@@ -1,57 +1,82 @@
-import { postSelecao } from "../../services/selecoes.service.js";
+import { getSelecoes, putSelecao } from "../../services/selecoes.service.js";
 
-const form = document.querySelector("#formPostSelecao");
+const boxForm = document.querySelector("#mainPutConquista")
+const anoConquista = document.querySelector('#anoConquista')
+const paisConquista = document.querySelector('#paisConquista')
+const selecoesSelect = document.querySelector('#selecoesSelect')
+const btnCadastrar = document.querySelector('#btnCadsConquista')
 
-const inputNome = document.querySelector("#nomeSelecao");
-const inputTecnico = document.querySelector("#tecnicoSelecao");
-const inputLogo = document.querySelector("#logoSelecao");
-const selectGrupo = document.querySelector("#grupoSelect");
-
-const color1 = document.querySelector("#color1");
-const color2 = document.querySelector("#color2");
-
-const boxFlagPreview = document.querySelector(".boxFlagPreview")
-const flagPreview = document.querySelector("#flagPreview");
-
-inputLogo.addEventListener("input", ()=>{
-    flagPreview.src = inputLogo.value;
-})
-
-const createSelecao = async(data) =>{
-    try{
-        const result = await postSelecao(data);
-        return result;
-    } catch(error){
-        console.log(error.message);
-    }
+function renderSelecoesSelect(lista) {
+    lista.sort((a, b) => a.nome.localeCompare(b.nome));
+    lista.forEach(selecao => {
+        const option = document.createElement('option')
+        option.value = selecao.nome
+        option.textContent = selecao.nome
+        selecoesSelect.appendChild(option)
+    })
+    btnCadastrar.addEventListener("click", async () => {
+        eventCadastrar(lista)
+    })
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            eventCadastrar(lista)
+        }
+    })
 }
 
-form.addEventListener("submit", async (e)=>{
-    e.preventDefault();
-    const data = {
-        nome: inputNome.value,
-        tecnico: inputTecnico.value,
-        logo: inputLogo.value,
-        grupo: selectGrupo.value,
-        cores: {
-            principal: color1.value,
-            secundaria: color2.value
-        },
-        conquistas: [],
-        jogadores: []
-    }
-
-    const result = await createSelecao(data);
-    alert(data.nome + " foi criado(a) com sucesso!!!")
-    console.log("Seleção criada:", result);
-    window.location.href = '/src/pages/listarSelecoes'
-    const ipts = form.querySelectorAll('input')
-    flagPreview.src = '';
-    ipts.forEach(ipt => {
-        if (ipt.type !== 'color') {
-            ipt.value = ''
-            return
-        }
-        ipt.value = "#000000"
+async function eventCadastrar(lista) {
+    let selecaoEncontrada = null
+    let selecaoJogadores = null
+    let conqAno = anoConquista.value
+    let conqPais = paisConquista.value
+    let conquistasSelecao = []
+    lista.forEach(selecao => {
+        if (selecao.nome !== selecoesSelect.value) return
+        selecaoEncontrada = selecao
+        selecao.conquistas.forEach(conquista => {
+            conquistasSelecao.push(conquista)
+        })
+        selecaoJogadores = selecao.jogadores
     })
-})
+    if (!selecaoEncontrada) {
+        alert('Seleção não encontrada')
+        return
+    }
+    if (conqAno < 1950 || conqAno > 2022) {
+        console.log('Erro, ano invalido')
+        alert('Erro, ano invalido')
+        return
+    }
+    if (conqPais.length <= 0) {
+        console.log('Erro no país')
+        alert('Erro no país')
+        return
+    }
+    console.log(conquistasSelecao)
+    const conquista = {
+        ano: Number(conqAno),
+        pais: conqPais,
+    }
+    conquistasSelecao.push(conquista)
+    const dadosAtualizados = {
+        ...selecaoEncontrada,
+        conquistas: conquistasSelecao,
+        jogadores: selecaoJogadores,
+    }
+    console.log(selecaoJogadores)
+    console.log(dadosAtualizados)
+    try {
+        await putSelecao(selecaoEncontrada.id, dadosAtualizados)
+        alert("Conquista cadastrada!")
+        location.reload()
+    } catch (error) {
+        console.error(error)
+        alert("Erro ao cadastrar conquista. Tente novamente.")
+    }
+    anoConquista.value = ''
+    paisConquista.value = ''
+    anoConquista.focus()
+}
+
+const selecoes = await getSelecoes()
+renderSelecoesSelect(selecoes)

@@ -1500,21 +1500,30 @@
         "principal": "#105930",
         "secundaria": "#ffffff"
       },
-      "conquistas": [],
-      "jogadores": []
-    },
-    {
-      "id": "1f09",
-      "nome": "Coreia do Sul",
-      "logo": "https://upload.wikimedia.org/wikipedia/pt/a/a7/South_Korea_national_football_team_logo.png",
-      "tecnico": "Hong Myung-bo",
-      "grupo": "A",
-      "cores": {
-        "principal": "#ff4747",
-        "secundaria": "#ffffff"
-      },
-      "jogadores": [],
-      "conquistas": []
+      "conquistas": [
+        {
+          "ano": 2000,
+          "pais": "Ilha Epstein"
+        }
+      ],
+      "jogadores": [
+        {
+          "id": "1",
+          "nome": "Mohamed Arabian",
+          "camisa": 7,
+          "posicao": "Lateral-direito",
+          "titular": true,
+          "gols": 777
+        },
+        {
+          "id": "2",
+          "nome": "Caça Rato",
+          "camisa": 9,
+          "posicao": "Atacante",
+          "titular": true,
+          "gols": 1253
+        }
+      ]
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

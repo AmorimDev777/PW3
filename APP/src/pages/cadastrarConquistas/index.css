@@ -8,127 +8,44 @@ body {
     justify-content: center;
     align-items: center;
     
-    box-shadow: 0 0 15px black;
     height: 75vh;
 }
-form {
+main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     
-    background: rgba(255, 255, 255, 0.349);
+    box-shadow: 0 0 15px black;
+    background: rgba(255, 255, 255, 0.082);
     padding: 4vw;
+    width: 35vw;
+    aspect-ratio: 1/1;
+    border-radius: 2vw;
 }
-.divIpt {
-    display: flex;
-    align-items: center;
-    position: relative;
-
-    width: 100%;
-}
-.divIpt label {
-    position: absolute;
-
-    pointer-events: none;
-    left: 15px;
-    font-size: 14px;
-}
-.divIpt input {
+main input {
     background: transparent;
     border: none;
-    border-bottom: solid 3px black;
+    border-bottom: solid 2px white;
+    color: white;
+    font-size: 1.7vw;
     width: 100%;
-    padding: 5px;
-    padding-bottom: 8px;
-    font-size: 14px;
+    padding: 1vw;
 }
-.divIpt input:focus + label {
-    transform: translateY(-120%);
-    font-size: 12px;
-}
-.divIpt input:valid + label {
-    transform: translateY(-120%);
-    font-size: 12px;
-}
-.divSlct {
-    display: flex;
-    justify-content: center;
-
-    width: 100%;
-    gap: 20px;
-}
-.divSlct select {
+main select {
     cursor: pointer;
-    border: none;
-    background: white;
-    width: 50%;
-    padding: 5px;
+    padding: 0.7vw;
+    width: 100%;
+    font-size: 1.7vw;
     border-radius: 50rem;
 }
-.divColors {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-
-    width: 100%;
-}
-.divColors div {
-    display: flex;
-    
-    width: 100%;
-}
-.divColors input {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    height: 40px;
-    width: 100%;
-}
-form button {
+main button {
     background: black;
     border: none;
     color: white;
     cursor: pointer;
     padding: 10px;
-    font-size: 16px;
+    font-size: 1.7vw;
     border-radius: 10px;
     width: 100%;
-}
-.boxFlagPreview {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: solid 2px rgba(255, 255, 255, 0.349);
-    box-shadow: 0 0 15px black inset;
-    padding: 3vw;
-}
-.boxFlagPreview img {
-    object-fit: contain;
-    width: 100%;
-    aspect-ratio: 1/1;
-    -moz-force-broken-image-icon: 0;
-    visibility: hidden;
-}
-.boxFlagPreview img:not([src=""]) {
-    visibility: visible;
-}
-form, .boxFlagPreview {
-    width: 35vw;
-    aspect-ratio: 1/1;
-    height: 100%;
-}
-
-@media (max-width: 600px) {
-    .container {
-        flex-direction: column;
-    }
-    form {
-        gap: 10px;
-    }
-    form, .boxFlagPreview {
-        width: 55vw;
-    }
 }
