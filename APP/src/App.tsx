@@ -1,13 +1,6 @@
-import { useState } from 'react'
-import './App.css'
 import { VeiculosList } from "./pages/VeiculosList";
+import "./App.css";
 
-function App() {
-  return (
-    <>
-      <VeiculosList />
-    </>
-  )
+export default function App() {
+  return <VeiculosList />;
 }
-
-export default App

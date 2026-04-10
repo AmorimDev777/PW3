@@ -36,8 +36,8 @@
     { "id": 10, "nome": "Luxo", "icone": "luxo.png" }
   ],
   "veiculos": [
-    { "id": 1, "Anunciantes_id": 1, "Fabricantes_id": 1, "modelo": "Corolla", "descricao": "Carro confortável e econômico", "valor": 85000, "ano": 2020, "ano_modelo": 2021, "fotos": ["corolla1.jpg", "corolla2.jpg"] },
-    { "id": 2, "Anunciantes_id": 2, "Fabricantes_id": 2, "modelo": "Civic", "descricao": "Sedan esportivo e confiável", "valor": 95000, "ano": 2019, "ano_modelo": 2020, "fotos": ["civic1.jpg", "civic2.jpg"] },
+    { "id": 1, "Anunciantes_id": 1, "Fabricantes_id": 1, "modelo": "Corolla", "descricao": "Carro confortável e econômico", "valor": 85000, "ano": 2020, "ano_modelo": 2021, "fotos": ["https://upload.wikimedia.org/wikipedia/commons/f/f6/Toyota_Corolla_Limousine_Hybrid_Genf_2019_1Y7A5576.jpg"] },
+    { "id": 2, "Anunciantes_id": 2, "Fabricantes_id": 2, "modelo": "Civic", "descricao": "Sedan esportivo e confiável", "valor": 95000, "ano": 2019, "ano_modelo": 2020, "fotos": ["https://cdn.motor1.com/images/mgl/mBrOo/s1/honda-civic-exl-2020.webp"] },
     { "id": 3, "Anunciantes_id": 1, "Fabricantes_id": 3, "modelo": "EcoSport", "descricao": "SUV compacto ideal para cidade", "valor": 70000, "ano": 2018, "ano_modelo": 2019, "fotos": ["ecosport1.jpg", "ecosport2.jpg"] },
     { "id": 4, "Anunciantes_id": 3, "Fabricantes_id": 4, "modelo": "Onix", "descricao": "Hatchback moderno e eficiente", "valor": 60000, "ano": 2021, "ano_modelo": 2022, "fotos": ["onix1.jpg", "onix2.jpg"] },
     { "id": 5, "Anunciantes_id": 4, "Fabricantes_id": 5, "modelo": "Golf", "descricao": "Sedan premium com tecnologia avançada", "valor": 120000, "ano": 2022, "ano_modelo": 2023, "fotos": ["golf1.jpg", "golf2.jpg"] },
