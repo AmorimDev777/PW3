@@ -1,29 +1,28 @@
-.veiculos-list {
+.veiculosList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
-    padding: 20px;
+    justify-content: start;
+    align-content: start;
+
+    gap: 1vw;
 }
 
-.veiculo-card {
+.veiculoCard {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    border: 1px solid #d4d4d8;
-    border-radius: 8px;
-    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+
     background: #fff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #d4d4d8;
+    aspect-ratio: 1/1;
+    gap: 10px;
+    border-radius: 1.3vw;
+    padding: 2vw;
 }
 
-.veiculo-card h2 {
-    margin: 0;
-}
-
-.veiculo-card img {
-    width: 300px;
-    max-width: 300px;
-    height: 180px;
-    object-fit: cover;
+.veiculoCard img {
+    object-fit: contain;
+    width: 250px;
+    aspect-ratio: 1.7/1;
     border-radius: 8px;
 }

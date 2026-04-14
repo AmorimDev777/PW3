@@ -11,12 +11,14 @@ export function VeiculosList() {
     getVeiculos().then(setVeiculos);
   }, []);
   return (
-    <div className="veiculos-list">
-      <h1>Lista de Veiculos</h1>
+    <div className="flex flex-col gap-4 p-7 w-screen">
+      <h1 className="text-center text-4xl">Lista de Veiculos</h1>
 
-      {veiculos.map((v) => (
-        <VeiculoCard key={v.id} veiculo={v} />
+      <div className="veiculosList grid-cols-[repeat(1,1fr)] md:grid-cols-[repeat(2,1fr)] xl:grid-cols-[repeat(3,1fr)] 2xl:grid-cols-[repeat(4,1fr)]">
+      {veiculos.map((veiculo) => (
+        <VeiculoCard key={veiculo.id} veiculo={veiculo} />
       ))}
+      </div>
     </div>
   );
 

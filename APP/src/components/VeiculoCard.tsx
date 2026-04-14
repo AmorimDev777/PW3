@@ -7,21 +7,19 @@ interface Props {
 export function VeiculoCard({ veiculo }: Props) {
 
   return (
-    <div className="veiculo-card">
-      <h2>{veiculo.modelo}</h2>
-        <img src={veiculo.fotos[0]} alt={veiculo.modelo} style={{ width: "300px", height: "auto" }} />
-      <p>{veiculo.descricao}</p>
+    <div className="veiculoCard text-center shadow-md shadow-black/30">
+      <h2 className="text-[clamp(30px,2vw,90px)]">{veiculo.modelo}</h2>
+      <img src={veiculo.fotos[0]} alt={veiculo.modelo} className="border-[2px] border-black"/>
+      <p className="text-[clamp(20px,1vw,70px)]">{veiculo.descricao}</p>
 
-      <p>
-        Ano: {veiculo.ano} / {veiculo.ano_modelo}
-      </p>
+      <p className="text-[clamp(30px,1vw,90px)]">Ano: {veiculo.ano} / {veiculo.ano_modelo}</p>
 
-      <strong>
+      <p className="text-[clamp(10px,1vw,90px)]">
         {veiculo.valor.toLocaleString("pt-BR", {
           style: "currency",
           currency: "BRL",
         })}
-      </strong>
+      </p>
     </div>
   );
 }
