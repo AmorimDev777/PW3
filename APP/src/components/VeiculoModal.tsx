@@ -12,13 +12,13 @@ interface Props {
 
 export function VeiculoModal({ veiculo, fabricantes, anunciantes, onClose }: Props) {
   return (
-    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50">
 
-      <div className="bg-white w-[700px] rounded-2xl shadow-2xl overflow-hidden relative shadow-lg border-3 border-green-700">
+      <div className="bg-white w-[730px] rounded-2xl shadow-lg p-3 overflow-hidden relative">
 
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 cursor-pointer text-red-700 text-xl transition-all duration-300  hover:text-red-900"
+          className="absolute top-6 right-6 cursor-pointer text-xl"
         >
           <FaX/>  
         </button>
@@ -26,7 +26,7 @@ export function VeiculoModal({ veiculo, fabricantes, anunciantes, onClose }: Pro
         <div className="w-full h-64 bg-white flex items-center justify-center">
           <img
             src={veiculo.fotos[0]}
-            className="object-contain h-full"
+            className="object-contain h-full transition-all duration-300 hover:scale-110 hover:-translate-y-3"
           />
         </div>
 

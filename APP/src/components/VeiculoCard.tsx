@@ -19,29 +19,6 @@ export function VeiculoCard({ veiculo, fabricantes, onClick }: Props) {
     hover:scale-105">
       <div className="w-full bg-white relative">
           <img className="object-contain aspect-[1.6/1]" src={veiculo.fotos[fotoIndex]} alt="" />
-          <button
-            onClick={(e) => {
-            e.stopPropagation();
-            setFotoIndex((prev) =>
-              (prev - 1 + veiculo.fotos.length) % veiculo.fotos.length
-            );
-          }}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-1 rounded-full"
-        >
-        <FaChevronLeft size={12} />
-        </button>
-
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            setFotoIndex((prev) =>
-              (prev + 1) % veiculo.fotos.length
-            );
-          }}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-1 rounded-full"
-        >
-          <FaChevronRight size={12} />
-        </button>
       </div>
 
       <div className="m-2">
