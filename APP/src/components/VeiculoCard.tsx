@@ -14,7 +14,7 @@ export function VeiculoCard({ veiculo, fabricantes, onClick }: Props) {
   const [fotoIndex, setFotoIndex] = useState(0);
   return (
     <div onClick={onClick} 
-    className="overflow-hidden flex flex-col items-center justify-start shadow-lg w-72 h-[20rem] rounded-lg text-center bg-white border-1 cursor-pointer 
+    className="overflow-hidden flex flex-col items-center justify-start shadow-lg w-72 h-[20rem] rounded-lg text-center bg-white cursor-pointer 
     transition-all duration-200
     hover:scale-105">
       <div className="w-full bg-white relative">
