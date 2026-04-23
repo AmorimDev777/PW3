@@ -14,7 +14,7 @@ export function VeiculoModal({ veiculo, fabricantes, anunciantes, onClose }: Pro
   return (
     <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
 
-      <div className="bg-white w-[700px] rounded-2xl shadow-2xl overflow-hidden relative shadow-lg border-3 border-green-700">
+      <div className="bg-white w-[700px] rounded-2xl shadow-2xl overflow-hidden relative shadow-lg">
 
         <button
           onClick={onClose}
@@ -32,7 +32,7 @@ export function VeiculoModal({ veiculo, fabricantes, anunciantes, onClose }: Pro
 
         <div className="p-5">
           <h2 className="text-2xl font-bold">
-            {fabricantes.find(f => f.id == veiculo.Fabricantes_id)?.nome ?? veiculo.Fabricantes_id} {veiculo.modelo}
+            {veiculo.modelo}
           </h2>
           <p className="text-gray-600 mt-1">
             {veiculo.ano} / {veiculo.ano_modelo}

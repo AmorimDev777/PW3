@@ -25,7 +25,7 @@ export function VeiculosList() {
     <div className="flex flex-col items-center bg-zinc-900 min-h-screen">
       <h1 className="font-bold text-center text-4xl text-white m-7">Lista de Veículos</h1>
 
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 min-[900px]:grid-cols-3! xl:grid-cols-4!">
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 min-[900px]:grid-cols-3! xl:grid-cols-4! 2xl:grid-cols-5! !min-[2000px]:grid-cols-6!">
         {veiculos.length > 0 ? (
           veiculos.map((v) => (
             <VeiculoCard
