@@ -7,3 +7,11 @@
     font-weight: 700;
     outline: 0;
 }
+
+body::-webkit-scrollbar {
+    background: rgb(0, 0, 0);
+}
+body::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 50rem;
+}
